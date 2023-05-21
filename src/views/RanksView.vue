@@ -102,7 +102,6 @@ function getDivineIMG() {
 .info-banner-wrapper {
     display: flex;
     width: 100%;
-    height: fit-content;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -129,6 +128,7 @@ function getDivineIMG() {
 .left-side {
     display: flex;
     width: 60%;
+    height: fit-content;
 }
 
 .right-side {
@@ -217,41 +217,51 @@ function getDivineIMG() {
 
 .view {
     display: flex;
+    height: fit-content;
 }
 
 .Bronze {
+    height: fit-content;
     grid-area: 1 / 1 / 2 / 2;
 }
 
 .Silver {
+    height: fit-content;
     grid-area: 1 / 2 / 2 / 3;
 }
 
 .Gold {
 
+    height: fit-content;
     grid-area: 1 / 3 / 2 / 4;
 
 }
 
 .Platinum {
+    height: fit-content;
+    margin-top: -6%;
     grid-area: 2 / 1 / 3 / 2;
 
 }
 
 .Diamond {
+    height: fit-content;
+    margin-top: -6%;
     grid-area: 2 / 2 / 3 / 3;
+
 }
 
 .Royal {
+    height: fit-content;
+    margin-top: -6%;
     grid-area: 2 / 3 / 3 / 4;
+
 }
 
 .rank-display-wrapper {
-    height: fit-content;
     width: 100%;
+    height: fit-content;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     transition: all 0.5s ease;

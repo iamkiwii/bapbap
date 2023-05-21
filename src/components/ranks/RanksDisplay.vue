@@ -147,6 +147,7 @@ export default {
 
 .Bronze {
     transform: skew(-5deg);
+    margin-bottom: px;
 
     .rank-name {
         user-select: none;
