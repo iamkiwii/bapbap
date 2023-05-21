@@ -43,7 +43,7 @@
 import RankDisplay from '@/components/ranks/RanksDisplay.vue';
 import GameData from '@/assets/GameData.js';
 import { RankObject } from '@/assets/GameData.js';
-import Divine from '@/assets/ranks/Divine.png'
+import Divine from '@/assets/ranks/divine.png'
 
 
 </script>

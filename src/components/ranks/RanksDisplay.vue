@@ -18,13 +18,13 @@
 <script setup>
 
 import { RankObject } from '@/assets/GameData.js';
-import Unranked from '@/assets/ranks/Unranked.png'
-import Bronze from '@/assets/ranks/Bronze.png'
-import Silver from '@/assets/ranks/Silver.png'
-import Gold from '@/assets/ranks/Gold.png'
-import Platinum from '@/assets/ranks/Platinum.png'
-import Diamond from '@/assets/ranks/Diamond.png'
-import Royal from '@/assets/ranks/Royal.png'
+import Unranked from '@/assets/ranks/unranked.png'
+import Bronze from '@/assets/ranks/bronze.png'
+import Silver from '@/assets/ranks/silver.png'
+import Gold from '@/assets/ranks/gold.png'
+import Platinum from '@/assets/ranks/platinum.png'
+import Diamond from '@/assets/ranks/diamond.png'
+import Royal from '@/assets/ranks/royal.png'
 
 </script>
 
