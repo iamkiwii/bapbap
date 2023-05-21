@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
+$background: linear-gradient(to top, #e73851, #d13981);
+$yellow: rgb(254, 214, 6);
+
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+    // make background image cover entire screen
+
+    background-image: $background;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+* {
+    font-family: "Archivo Black", sans-serif;
+    color: rgb(9, 34, 56);
+    text-decoration: none;
+}
+
+// e73851 d13981
