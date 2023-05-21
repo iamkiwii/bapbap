@@ -153,8 +153,15 @@ export default {
             return this.stats[this.color] + " " + this.desc
         },
         getStats() {
-            let a = GameData.extrastats[this.type]
-            return a.stat[this.color] + a.desc
+            console.log(this.type)
+            let t = this.type
+            if (t == undefined) {
+                return GameData.extrastats["Hat"].stat[this.color] + GameData.extrastats["Hat"].desc
+            }
+            else {
+                let a = GameData.extrastats[t]
+                return a.stat[this.color] + a.desc
+            }
         }
     },
     data() {
