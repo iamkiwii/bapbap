@@ -153,7 +153,6 @@ export default {
             return this.stats[this.color] + " " + this.desc
         },
         getStats() {
-            console.log(this.type)
             let t = this.type
             if (t == undefined) {
                 return GameData.extrastats["Hat"].stat[this.color] + GameData.extrastats["Hat"].desc

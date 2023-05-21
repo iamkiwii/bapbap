@@ -149,6 +149,7 @@ export default {
     transform: skew(-5deg);
 
     .rank-name {
+        user-select: none;
         color: #c3614b;
         text-decoration-color: #00c4e8;
     }
@@ -162,6 +163,7 @@ export default {
     border-spacing: 20px;
 
     .rank-name {
+        user-select: none;
         color: #6b9dcb;
         text-decoration-color: #00ccbd;
     }
@@ -172,6 +174,7 @@ export default {
     transform: skew(-5deg);
 
     .rank-name {
+        user-select: none;
         color: #eba61c;
         text-decoration-color: #88b500;
     }
@@ -191,6 +194,7 @@ export default {
     }
 
     .rank-name {
+        user-select: none;
         color: #c31fdc;
         text-decoration-color: #ff4801;
     }
@@ -210,6 +214,7 @@ export default {
     }
 
     .rank-name {
+        user-select: none;
         color: #6ae1e1;
         text-decoration-color: #fd52eb;
     }
@@ -228,6 +233,7 @@ export default {
     }
 
     .rank-name {
+        user-select: none;
         color: #8b93ff;
         text-decoration-color: #c962ff;
     }
@@ -239,6 +245,7 @@ export default {
 }
 
 .rank-banners {
+    user-select: none;
     transition: 0.1s ease-in-out;
     display: flex;
     flex-direction: column;

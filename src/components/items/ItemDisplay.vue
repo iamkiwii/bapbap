@@ -31,7 +31,6 @@ export default {
     methods: {
         getImage() {
             var filename = "Item_" + UserData.currentActive + "_" + this.item.type
-            console.log(filename)
             return filename
         }
     },

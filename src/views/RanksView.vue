@@ -72,6 +72,7 @@ function getDivineIMG() {
 
 <style lang="scss" scoped>
 .info-title {
+    user-select: none;
     text-shadow: 2px 2px 3px rgba($color: rgb(0, 0, 0), $alpha: 0.3);
     text-decoration: underline;
     text-underline-offset: 10px;
@@ -82,10 +83,12 @@ function getDivineIMG() {
 }
 
 .info-banner-text {
+    user-select: none;
     margin-left: 20px;
     margin-right: 20px;
 
     div {
+        user-select: none;
         text-shadow: 2px 2px 3px rgba($color: rgb(0, 0, 0), $alpha: 0.3);
         color: rgb(9, 34, 56);
         margin-bottom: 10px;

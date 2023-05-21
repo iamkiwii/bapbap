@@ -53,18 +53,13 @@ export default {
 
 function toggleActive(a) {
     UserData.currentActive = a.name
-    console.log("clicked")
     if (a.isActive == true) {
-        console.log("already active")
         return;
     }
-    console.log("not active")
     for (let i = 0; i < UserData.ActiveItems.length; i++) {
         if (UserData.ActiveItems[i] == a) {
-            console.log("setting active")
             UserData.ActiveItems[i].isActive = true;
         } else {
-            console.log("setting inactive")
             UserData.ActiveItems[i].isActive = false;
         }
     }
