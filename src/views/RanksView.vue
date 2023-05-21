@@ -25,10 +25,11 @@
             <div class="info-banner-wrapper">
                 <div class="info-banner">
                     <div class="info-banner-text-wrapper">
+                        <div class="info-title">INFO</div>
                         <div class="info-banner-text">
-                            <p>Each player starts at 0 ranked points.</p>
-                            <p>Each game played will cost the player a fee (unless unranked)</p>
-                            <P>Reaching the threshold of 100 ranked points per rank will cause a rank up</P>
+                            <div>Each player starts at 0 ranked points.</div>
+                            <div>Each game played will cost the player a fee (unless unranked)</div>
+                            <div>Reaching the threshold of 100 ranked points per rank will cause a rank up</div>
                         </div>
                     </div>
                 </div>
@@ -70,6 +71,31 @@ function getDivineIMG() {
 </script>
 
 <style lang="scss" scoped>
+.info-title {
+    text-shadow: 2px 2px 3px rgba($color: rgb(0, 0, 0), $alpha: 0.3);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    font-size: 30px;
+    color: rgb(9, 34, 56);
+}
+
+.info-banner-text {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    div {
+        text-shadow: 2px 2px 3px rgba($color: rgb(0, 0, 0), $alpha: 0.3);
+        color: rgb(9, 34, 56);
+        margin-bottom: 10px;
+    }
+}
+
+.info-banner-text-wrapper {
+    transform: skew(-5deg);
+}
+
 .info-banner-wrapper {
     display: flex;
     width: 100%;
@@ -81,11 +107,11 @@ function getDivineIMG() {
 }
 
 .info-banner {
-    box-shadow: 5px 5px 0px rgba($color: rgb(192, 192, 192), $alpha: 1), 8px 8px 8px rgba($color: #000000, $alpha: 0.3);
     transform: skew(5deg);
+    box-shadow: 5px 5px 0px rgba($color: rgb(250, 151, 34), $alpha: 1), -30px -30px 0px rgba($color: rgb(9, 34, 56), $alpha: 1), 10px 10px 8px rgba($color: #000000, $alpha: 0.3);
     width: 400px;
     height: 200px;
-    background-color: white;
+    background-color: rgb(254, 214, 6);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,6 +119,7 @@ function getDivineIMG() {
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 
@@ -146,32 +173,38 @@ function getDivineIMG() {
     margin-top: 5px;
     margin-bottom: 10px;
     width: 300px;
-    height: 100px;
-    background-color: white;
-    box-shadow: 4px 4px 0px rgba($color: rgb(192, 192, 192), $alpha: 1), 6px 6px 8px rgba($color: #000000, $alpha: 0.3);
+    height: 120px;
+    background-color: rgb(9, 34, 56);
+    box-shadow: 4px 4px 0px rgba($color: black, $alpha: 1), 6px 6px 8px rgba($color: #000000, $alpha: 0.3);
     text-align: center;
 }
 
 .divine-name {
     user-select: none;
+    color: #8dfad0;
     text-transform: uppercase;
     text-align: left;
     margin-left: 10px;
     font-size: 1.7rem;
     text-shadow: 1px 1px 8px rgba($color: #000000, $alpha: 0.3);
     text-decoration: underline;
-    text-underline-offset: 4px;
+    text-decoration-color: #ff3c5e;
+    text-underline-offset: 12px;
+    margin-bottom: 12px;
 }
 
 .divine-fee {
+    color: #ff3c5e;
     user-select: none;
     text-transform: uppercase;
     text-align: left;
     margin-left: 10px;
     font-size: 1.3rem;
+    margin-bottom: 5px;
 }
 
 .divine-threshold {
+    color: #ff3c5e;
     user-select: none;
     text-transform: uppercase;
     text-align: left;

@@ -1,11 +1,12 @@
 <template>
     <div class="item-containers">
-        <div class="circle hidden" :class="getColor()" @click="(e) => expandItems(e)">
-            <img :src="getImage()" class="item" draggable="false">
+        <div class="circle hidden" :class="color" @click="(e) => expandItems(e)">
+            <img :src="getImage()" class="item" draggable="false" :class="type">
         </div>
         <div class="item-info hidden-banner" :class="getBannerColor()">
-            <div class="item-name">{{ getName() }}</div>
+            <div class="item-name">{{ name }}</div>
             <div class="item-desc">{{ getInfo() }}</div>
+            <div class="item-desc">{{ getStats() }}</div>
         </div>
     </div>
 </template>
@@ -20,11 +21,13 @@ import Item_Boots_DMG from '@/assets/items/Item_Boots_DMG.png'
 import Item_Boots_CDR from '@/assets/items/Item_Boots_CDR.png'
 import Item_Boots_HP from '@/assets/items/Item_Boots_HP.png'
 import Item_Boots_LS from '@/assets/items/Item_Boots_LS.png'
+import Item_Boots_CRIT from '@/assets/items/Item_Boots_CRIT.png'
 import Item_Hat_CRIT from '@/assets/items/Item_Hat_CRIT.png'
 import Item_Hat_HP from '@/assets/items/Item_Hat_HP.png'
 import Item_Hat_LS from '@/assets/items/Item_Hat_LS.png'
 import Item_Hat_DMG from '@/assets/items/Item_Hat_DMG.png'
 import Item_Hat_CDR from '@/assets/items/Item_Hat_CDR.png'
+import GameData from '@/assets/GameData'
 </script>
 <script scoped>
 
@@ -133,14 +136,12 @@ export default {
         color: String,
         name: String,
         desc: String,
-        stats: Array
+        stats: Array,
+        type: String
     },
     methods: {
         getImage() {
             return getImageURL(this.filename)
-        },
-        getColor() {
-            return this.color
         },
         getBannerColor() {
             return this.color + "-banner"
@@ -149,11 +150,16 @@ export default {
             expandItems(event)
         },
         getInfo() {
-            let a = this.stats[this.color] + " " + this.desc
-            return a
+            return this.stats[this.color] + " " + this.desc
         },
-        getName() {
-            return this.name
+        getStats() {
+            let a = GameData.extrastats[this.type]
+            return a.stat[this.color] + a.desc
+        }
+    },
+    data() {
+        return {
+            GameData: GameData
         }
     }
 }
@@ -171,12 +177,51 @@ function getImageURL(file) {
             return Item_Backpack_HP
         case "Item_Backpack_LS":
             return Item_Backpack_LS
+        case "Item_Hat_CDR":
+            return Item_Hat_CDR
+        case "Item_Hat_CRIT":
+            return Item_Hat_CRIT
+        case "Item_Hat_DMG":
+            return Item_Hat_DMG
+        case "Item_Hat_HP":
+            return Item_Hat_HP
+        case "Item_Hat_LS":
+            return Item_Hat_LS
+        case "Item_Boots_CDR":
+            return Item_Boots_CDR
+        case "Item_Boots_CRIT":
+            return Item_Boots_CRIT
+        case "Item_Boots_DMG":
+            return Item_Boots_DMG
+        case "Item_Boots_HP":
+            return Item_Boots_HP
+        case "Item_Boots_LS":
+            return Item_Boots_LS
+        case "Item_undefined_CDR":
+            return Item_Hat_CDR
+        case "Item_undefined_CRIT":
+            return Item_Hat_CRIT
+        case "Item_undefined_DMG":
+            return Item_Hat_DMG
+        case "Item_undefined_HP":
+            return Item_Hat_HP
+        case "Item_undefined_LS":
+            return Item_Hat_LS
     }
 }
 
 </script>
 
 <style lang="scss" scoped>
+.Boots {
+    margin-top: 8px;
+}
+
+.Backpack {
+    margin-top: -2px;
+    margin-left: 13px !important;
+}
+
 .item-name {
     transform: skew(5deg);
     font-size: 20px;
@@ -262,9 +307,10 @@ function getImageURL(file) {
     height: 50px;
     width: 50px;
     opacity: 100%;
-    margin-left: 13px;
-    margin-bottom: 6px;
+    margin-left: 11px;
+    margin-bottom: 4px;
     user-select: none;
+    transition: 0.2s ease-in-out;
 }
 
 .white-banner {

@@ -106,10 +106,11 @@ export default {
 .rank-banners:hover {
     transform: scale(1.3);
     transition: 0.4s ease-in-out;
-    box-shadow: 3px 3px 0px rgba($color: rgb(192, 192, 192), $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3), 0px 0px 50px rgba($color: #000000, $alpha: 0.5);
+    box-shadow: 3px 3px 0px rgba($color: black, $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3), 0px 0px 50px rgba($color: #000000, $alpha: 0.5);
 }
 
 .rank-name {
+    color: white;
     user-select: none;
     text-transform: uppercase;
     text-align: left;
@@ -117,10 +118,12 @@ export default {
     font-size: 1.3rem;
     text-shadow: 1px 1px 8px rgba($color: #000000, $alpha: 0.3);
     text-decoration: underline;
-    text-underline-offset: 4px;
+    text-underline-offset: 6px;
+    margin-bottom: 3%;
 }
 
 .rank-fee {
+    color: white;
     user-select: none;
     text-transform: uppercase;
     text-align: left;
@@ -129,6 +132,7 @@ export default {
 }
 
 .rank-threshold {
+    color: white;
     user-select: none;
     text-transform: uppercase;
     text-align: left;
@@ -138,11 +142,16 @@ export default {
 
 .banner-text-wrapper {
     transform: skew(5deg);
+    color: white;
 }
 
 .Bronze {
-
     transform: skew(-5deg);
+
+    .rank-name {
+        color: #c3614b;
+        text-decoration-color: #00c4e8;
+    }
 }
 
 .Silver {
@@ -151,11 +160,21 @@ export default {
     box-sizing: border-box;
     mask-border-outset: 5px;
     border-spacing: 20px;
+
+    .rank-name {
+        color: #6b9dcb;
+        text-decoration-color: #00ccbd;
+    }
 }
 
 .Gold {
 
     transform: skew(-5deg);
+
+    .rank-name {
+        color: #eba61c;
+        text-decoration-color: #88b500;
+    }
 }
 
 .Royal {
@@ -171,6 +190,10 @@ export default {
         transform: skew(-5deg);
     }
 
+    .rank-name {
+        color: #c31fdc;
+        text-decoration-color: #ff4801;
+    }
 
 }
 
@@ -184,6 +207,11 @@ export default {
 
     .banner-text-wrapper {
         transform: skew(-5deg);
+    }
+
+    .rank-name {
+        color: #6ae1e1;
+        text-decoration-color: #fd52eb;
     }
 }
 
@@ -199,6 +227,11 @@ export default {
         transform: skew(-5deg);
     }
 
+    .rank-name {
+        color: #8b93ff;
+        text-decoration-color: #c962ff;
+    }
+
 }
 
 .rank-banners-wrapper {
@@ -212,9 +245,9 @@ export default {
     margin-top: 5px;
     margin-bottom: 10px;
     width: 200px;
-    height: 70px;
-    background-color: white;
-    box-shadow: 3px 3px 0px rgba($color: rgb(192, 192, 192), $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3);
+    height: 80px;
+    background-color: rgb(9, 34, 56);
+    box-shadow: 3px 3px 0px rgba($color: black, $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3);
     text-align: center;
 }
 
