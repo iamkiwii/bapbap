@@ -45,6 +45,7 @@ UserData.ActiveItems.push(new ActiveItemObject(Boots));
 export class ActiveChampObject {
     constructor(props) {
         this.name = props.name;
+        this.nickName = props.nickName;
         this.isActive = props.isActive;
     }
     disableActive() {
@@ -59,6 +60,7 @@ export class ActiveChampObject {
 
 var Chuck = {
     name: "Chuck",
+    nickName: "Chuck.",
     abilities: {
         basic: {
             name: "Chuck Punch",
@@ -77,11 +79,12 @@ var Chuck = {
             desc: "Become gigantic and get a hp, damage and speed buff."
         }
     },
-    isActive: true
+    isActive: true,
 }
 
 var Anna = {
     name: "Anna",
+    nickName: "Speedy Graffitier",
     abilities: {
         basic: {
             name: "Run N' Gun",
@@ -105,6 +108,7 @@ var Anna = {
 
 var Zook = {
     name: "Zook",
+    nickName: "Stylish Arms Dealer",
     abilities: {
         basic: {
             name: "Bazooka",
@@ -128,6 +132,7 @@ var Zook = {
 
 var Kitsu = {
     name: "Kitsu",
+    nickName: "Fox Huntress",
     abilities: {
         basic: {
             name: "Violet Strike",
@@ -151,6 +156,7 @@ var Kitsu = {
 
 var Sashimi = {
     name: "Sashimi",
+    nickName: "Upgraded Fishtank",
     abilities: {
         basic: {
             name: "Chop Chop",
@@ -174,6 +180,7 @@ var Sashimi = {
 
 var Kiddo = {
     name: "Kiddo",
+    nickName: "Pyro Prodigy",
     abilities: {
         basic: {
             name: "Light it up",
@@ -197,6 +204,7 @@ var Kiddo = {
 
 var Skinny = {
     name: "Skinny",
+    nickName: "Shadow Walker",
     abilities: {
         basic: {
             name: "Reap",
@@ -220,6 +228,7 @@ var Skinny = {
 
 var Froggy = {
     name: "Froggy",
+    nickName: "Swamp Master",
     abilities: {
         basic: {
             name: "Ribbhit",
@@ -243,6 +252,7 @@ var Froggy = {
 
 var Teevee = {
     name: "Teevee",
+    nickName: "D34D_B33F.exe",
     abilities: {
         basic: {
             name: "Hello World",
@@ -266,6 +276,7 @@ var Teevee = {
 
 var Sofia = {
     name: "Sofia",
+    nickName: "Blaze Bandit",
     abilities: {
         basic: {
             name: "Fire Slash",

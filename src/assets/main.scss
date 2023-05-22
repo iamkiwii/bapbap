@@ -12,4 +12,5 @@ $yellow: rgb(254, 214, 6);
   user-select: none;
   display: flex;
   flex-direction: column;
+  backface-visibility: hidden;
 }

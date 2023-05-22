@@ -13,7 +13,7 @@
             <!-- Seperate component for divine rank cuz its max rank -->
             <div class="divine-wrapper">
                 <div class="divine-image-wrapper">
-                    <img :src="getDivineIMG()" class="divine-image">
+                    <img :src="getDivineIMG()" class="divine-image" draggable="false">
                 </div>
                 <div class="divine-banners-wrapper">
                     <div class="divine-banners">
@@ -79,23 +79,24 @@ function getDivineIMG() {
     user-select: none;
     text-shadow: 2px 2px 3px rgba($color: rgb(0, 0, 0), $alpha: 0.3);
     text-decoration: underline;
-    text-underline-offset: 10px;
-    margin-bottom: 15px;
-    margin-left: 20px;
-    font-size: 30px;
+    text-underline-offset: 30%;
+    margin-bottom: 4%;
+    margin-left: 5%;
+    font-size: 190%;
     color: rgb(9, 34, 56);
 }
 
 .info-banner-text {
     user-select: none;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 100%;
 
     div {
         user-select: none;
         text-shadow: 2px 2px 3px rgba($color: rgb(0, 0, 0), $alpha: 0.3);
         color: rgb(9, 34, 56);
-        margin-bottom: 10px;
+        margin-bottom: 3%;
     }
 }
 
@@ -115,17 +116,14 @@ function getDivineIMG() {
 .info-banner {
     transform: skew(5deg);
     box-shadow: 5px 5px 0px rgba($color: rgb(250, 151, 34), $alpha: 1), -30px -30px 0px rgba($color: rgb(9, 34, 56), $alpha: 1), 10px 10px 8px rgba($color: #000000, $alpha: 0.3);
-    width: 400px;
-    height: 200px;
+    width: 75%;
+    height: 45%;
     background-color: rgb(254, 214, 6);
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
     justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
 }
 
 
@@ -269,6 +267,6 @@ function getDivineIMG() {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     transition: all 0.5s ease;
-    margin-top: 10px;
+    margin-top: 1.35%;
 }
 </style>
