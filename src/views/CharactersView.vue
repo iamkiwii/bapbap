@@ -47,9 +47,12 @@ export default {
 
 
 <style lang="scss" scoped>
-.character-container {
-    width: fit-content;
-    height: fit-content;
+.character-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+
 }
 
 .view-wrapper {
