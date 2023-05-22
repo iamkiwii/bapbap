@@ -49,7 +49,6 @@ export default {
 .container-wrapper {
     display: flex;
     flex-direction: column;
-    margin-right: 40px;
     position: relative;
     width: fit-content;
     height: fit-content;

@@ -27,6 +27,7 @@ export class ChampObject {
 
 var GameData = {
     itemlist: [],
+    itemtypes: { CDR: "CHRONO", CRIT: "SNAP", DMG: "SHARP", HP: "BULKY", LS: "VAMP" },
     ranks: [],
     champs: [],
     extrastats: {

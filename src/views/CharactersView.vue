@@ -3,7 +3,6 @@
         <div class="character-container" v-for="ChampObject in GameData.champs" :key="ChampObject">
 
             <CharacterDisplay :champ="ChampObject" />
-
         </div>
     </div>
 </template>
@@ -29,6 +28,19 @@ export default {
     methods: {
 
     }
+}
+
+
+</script>
+
+<script>
+
+export default {
+    data() {
+        return {
+            GameData: GameData
+        }
+    },
 }
 
 </script>

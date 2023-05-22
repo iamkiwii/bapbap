@@ -7,7 +7,11 @@
 
 
 
-
+    <div class="item-type-banner">
+        <div v-for="types in GameData.itemtypes" :key="type">
+            <h1>{{ types }}</h1>
+        </div>
+    </div>
     <div class="item-display-wrapper">
         <div class="item-display" v-for="item in GameData.itemlist" :key="item">
             <ItemDisplay :item="item" :key="updateKey" />
@@ -90,10 +94,6 @@ function toggleActive(a) {
     transition: all 0.5s ease;
     margin-top: 40px;
 
-}
-
-.item-display {
-    padding-right: 15%;
 }
 
 

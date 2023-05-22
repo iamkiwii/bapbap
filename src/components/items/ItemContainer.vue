@@ -164,7 +164,7 @@ function getImageURL(file) {
     height: 70px;
     width: 200px;
     margin-top: 0px;
-    margin-left: 100px;
+    margin-left: 30px;
     z-index: -1;
 }
 
