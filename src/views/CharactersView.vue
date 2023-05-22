@@ -1,8 +1,17 @@
 <template>
     <div class="view-wrapper">
-        <div class="character-container" v-for="ActiveChampObject in UserData.ActiveChamps" :key="ActiveChampObject">
+
+        <div class="active-champ-display">
+
+
+
+        </div>
+
+
+
+        <div class="character-selector" v-for="ActiveChampObject in UserData.ActiveChamps" :key="ActiveChampObject">
             <div class="temporary"></div>
-            <CharacterDisplay :champ="ActiveChampObject" :key="updateKey" @click="toggleActiveItem(ActiveChampObject)"/>
+            <CharacterDisplay :champ="ActiveChampObject" :key="updateKey" @click="toggleActiveItem(ActiveChampObject)" />
         </div>
     </div>
 </template>
@@ -11,7 +20,6 @@
 import GameData from '@/assets/GameData.js'
 import UserData from '@/assets/UserData.js';
 import { ActiveChampObject } from '@/assets/UserData.js';
-import { ChampObject } from '@/assets/GameData.js'
 import CharacterDisplay from '@/components/characters/CharacterDisplay.vue';
 </script>
 
@@ -61,14 +69,17 @@ function toggleActive(a) {
 
 
 <style lang="scss" scoped>
-.character-container {
+.character-selector {
     width: 8%;
     height: fit-content;
     padding: 10px;
     margin: auto 0px;
+
 }
 
 .view-wrapper {
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
 }

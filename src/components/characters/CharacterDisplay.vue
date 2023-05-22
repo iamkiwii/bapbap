@@ -9,16 +9,16 @@
 
 <script setup>
 import { ActiveChampObject } from '@/assets/UserData'
-import Kitsu from '@/assets/champs/images/Kitsu.png'
-import Anna from '@/assets/champs/images/Anna.png'
-import Chuck from '@/assets/champs/images/Chuck.png'
-import Froggy from '@/assets/champs/images/Froggy.png'
-import Sashimi from '@/assets/champs/images/Sashimi.png'
-import Skinny from '@/assets/champs/images/Skinny.png'
-import Sofia from '@/assets/champs/images/Sofia.png'
-import Teevee from '@/assets/champs/images/Teevee.png'
-import Zook from '@/assets/champs/images/Zook.png'
-import Kiddo from '@/assets/champs/images/Kiddo.png'
+import Kitsu from '@/assets/champs/images/Kitsu Icon.png'
+import Anna from '@/assets/champs/images/Anna Icon.png'
+import Chuck from '@/assets/champs/images/Chuck Icon.png'
+import Froggy from '@/assets/champs/images/Froggy Icon.png'
+import Sashimi from '@/assets/champs/images/Sashimi Icon.png'
+import Skinny from '@/assets/champs/images/Skinny Icon.png'
+import Sofia from '@/assets/champs/images/Sofia Icon.png'
+import Teevee from '@/assets/champs/images/Teevee Icon.png'
+import Zook from '@/assets/champs/images/Zook Icon.png'
+import Kiddo from '@/assets/champs/images/Kiddo Icon.png'
 </script>
 
 <script>
@@ -74,6 +74,7 @@ export default {
     display: grid;
     justify-content: center;
     align-items: center;
+
 }
 
 .champ-wrapper {
@@ -83,11 +84,13 @@ export default {
     transform: skew(-5deg);
     margin: auto 0px;
     box-shadow: 2px 2px 0px rgba($color: #1d7077, $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3);
+
 }
 
 .champ-image {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .active {
