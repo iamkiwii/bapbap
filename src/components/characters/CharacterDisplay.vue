@@ -82,9 +82,7 @@ export default {
     background-color: #091335;
     transform: skew(-5deg);
     margin: auto 0px;
-    //outline: black solid 2px;
-    // display: flex;
-    // flex-direction: column;
+    box-shadow: 2px 2px 0px rgba($color: #1d7077, $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3);
 }
 
 .champ-image {
