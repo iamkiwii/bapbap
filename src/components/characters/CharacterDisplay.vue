@@ -1,8 +1,8 @@
 <template>
-    <div class="champ-wrapper" :class="checkIfActive()">
-        <img :src="getImage(champ.name)" class="champ-image" />
-        <div class="banner">
-            <div class="name">{{ champ.name }}</div>
+    <div :class="checkIfActive()">
+        <div class="champ-wrapper">
+
+            <img :src="getImage(champ.name)" class="champ-image" />
         </div>
     </div>
 </template>
@@ -68,23 +68,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.banner {
-    width: 100%;
-    height: 5%;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-
-}
-
 .champ-wrapper {
-    width: 100%;
-    height: 100px;
-    background-color: #091335;
-    transform: skew(-5deg);
-    margin: auto 0px;
-    box-shadow: 2px 2px 0px rgba($color: #1d7077, $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3);
-
+    margin: auto;
 }
 
 .champ-image {
@@ -95,23 +80,54 @@ export default {
 
 .active {
     height: 125px;
-    background-color: rgb(254, 214, 6);
-    border: 0;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-}
+    width: 65%;
+    transform: skew(-5deg);
+    border: rgb(254, 214, 6) solid 3px;
+    filter: drop-shadow(3px 3px 0px rgba($color: #fa9722, $alpha: 1)) drop-shadow(5px 5px 8px rgba($color: #000000, $alpha: 0.3));
 
-.inactive {
-    box-sizing: border-box;
-    border: 0;
-    cursor: pointer;
-    transition: 0.2s ease-in;
+    .champ-wrapper {
+        cursor: pointer;
+        display: flex;
+        background-color: rgb(254, 214, 6);
+        height: 125px;
+    }
+
 }
 
 .inactive:hover {
-    box-sizing: border-box;
-    border: white solid 3px;
-    transition: 0.2s ease-in-out;
+    filter: drop-shadow(3px 3px 0px rgba($color: #979797, $alpha: 1)) drop-shadow(5px 5px 8px rgba($color: #000000, $alpha: 0.3));
+
+    .champ-wrapper {
+        outline: white solid 3px;
+        // outline-offset: -3px;
+
+        .champ-image {
+            outline: white solid 3px;
+            // outline-offset: -3px;
+        }
+    }
+
+}
+
+.inactive {
+    width: 60%;
+    transform: skew(-5deg);
+    filter: drop-shadow(3px 3px 0px rgba($color: #1d7077, $alpha: 1)) drop-shadow(5px 5px 8px rgba($color: #000000, $alpha: 0.3));
+
+    .champ-wrapper {
+        outline: white solid 0px;
+        cursor: pointer;
+        display: flex;
+        height: 100px;
+        width: 100%;
+        background-color: #091335;
+    }
+
+    // .champ-wrapper:hover {
+    //     transform: scale(1.048);
+    //     box-sizing: content-box;
+    //     z-index: 2;
+    // }
 }
 
 .current-champ {
