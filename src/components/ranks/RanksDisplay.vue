@@ -1,5 +1,5 @@
 <template>
-    <div class="rank-wrapper" :class="getRank()">
+    <div class="rank-wrapper" :class="getRank()"> <!-- wrapper for each rank to add certain styles to each rank -->
         <div class="image-wrapper">
             <img :src="getImage()" class="image">
         </div>
@@ -18,6 +18,8 @@
 <script setup>
 
 import { RankObject } from '@/assets/GameData.js';
+
+// Imports rank images bc vite has cancer
 import Unranked from '@/assets/ranks/unranked.png'
 import Bronze from '@/assets/ranks/bronze.png'
 import Silver from '@/assets/ranks/silver.png'
@@ -35,7 +37,7 @@ export default {
         rank: RankObject
     },
     methods: {
-        getImage() {
+        getImage() { // Returns the image for the rank again cuz vite has cancer
             let filename;
             switch (this.rank.rank) {
                 case "Unranked":
@@ -65,10 +67,10 @@ export default {
         getRank() {
             return this.rank.rank
         },
-        getRankText(tier) {
+        getRankText(tier) { // Returns the rank text for the rank with the tier text. Ex: Bronze II
             return this.rank.rank + " " + tier
         },
-        getFee(tier) {
+        getFee(tier) { // Calculates fee bc making a seperate object for each rank is dumb
             let n = 0;
             let i = this.rank.fee;
             if (tier == "II") n = 1;
@@ -77,7 +79,7 @@ export default {
             let fee = i + n;
             return fee;
         },
-        getThreshold(tier) {
+        getThreshold(tier) { // Calculates threshold bc making a seperate object for each rank is dumb
             let n = 0;
             let i = this.rank.threshold;
             if (tier == "II") n = 1;

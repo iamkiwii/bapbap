@@ -17,10 +17,19 @@ export class RankObject {
     }
 }
 
+export class ChampObject {
+    constructor(props) {
+        this.name = props.name;
+        this.abilities = props.abilities;
+        this.stats = props.stats;
+    }
+}
+
 var GameData = {
     itemlist: [],
     itemtypes: { CDR: "CHRONO", CRIT: "SNAP", DMG: "SHARP", HP: "BULKY", LS: "VAMP" },
     ranks: [],
+    champs: [],
     extrastats: {
         Boots: {
             stat: { white: 15, green: 30, blue: 45, purple: 60, yellow: 75 },
@@ -32,10 +41,37 @@ var GameData = {
         },
         Hat: {
             stat: { white: 15, green: 30, blue: 45, purple: 60, yellow: 75 },
-            desc: "% CDR"
+            desc: " CDR"
         }
     }
 }
+
+// Champs Data
+
+var Chuck = {
+    name: "Chuck",
+    abilities: {
+        basic: {
+            name: "Chuck Punch",
+            desc: "Punch for a 3-hit combo. Hitting an opponent will grant you a Knock stack."
+        },
+        special: {
+            name: "Chuck Knock",
+            desc: "Throw a powerful punch. Inflict stun if you have full Knock stacks."
+        },
+        movement: {
+            name: "Chuck Jump",
+            desc: "Jump to a location. Apply knock up on land."
+        },
+        ultimate: {
+            name: "CHUCK!!!!",
+            desc: "Become gigantic and get a hp, damage and speed buff."
+        }
+    }
+}
+
+GameData.champs.push(new ChampObject(Chuck))
+
 
 // Ranks Data
 

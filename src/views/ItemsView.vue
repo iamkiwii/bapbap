@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="item-display-wrapper">
-        <div v-for="item in GameData.itemlist" :key="item">
+        <div class="item-display" v-for="item in GameData.itemlist" :key="item">
             <ItemDisplay :item="item" :key="updateKey" />
         </div>
     </div>
@@ -44,10 +44,12 @@ export default {
         ItemDisplay
     },
     methods: {
+        // Toggles active item in UserData.ActiveItems then forces a re-render of the ItemSelector component
         toggleActiveItem(item) {
             toggleActive(item);
             this.forceRender();
         },
+        // Forces a re-render of the ItemSelector component
         forceRender() {
             this.updateKey++;
         }
@@ -86,7 +88,7 @@ function toggleActive(a) {
     flex-direction: row;
     width: 100%;
     height: 100%;
-    position: relative;
+    //position: relative;
     top: 0;
     left: 0;
     transition: all 0.5s ease;

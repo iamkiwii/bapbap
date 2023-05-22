@@ -1,6 +1,7 @@
 <template>
-    <div class="container-wrapper">
+    <div class="container-wrapper"> <!-- Wraps the entire items display-->
         <div v-for="color in item.colors" :key="color">
+            <!-- Loops through all colors and wraps each item type and all its tiers-->
             <ItemContainer :filename="getImage()" :color="color" :class="item.type" :desc="item.desc" :stats="item.stats"
                 :type="activeItem" :name="item.name" />
         </div>
@@ -48,7 +49,6 @@ export default {
 .container-wrapper {
     display: flex;
     flex-direction: column;
-    margin-right: 40px;
     position: relative;
     width: fit-content;
     height: fit-content;

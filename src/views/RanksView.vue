@@ -1,13 +1,16 @@
 <template>
     <div class="view">
         <div class="left-side">
-            <div class="rank-display-wrapper">
+            <div class="rank-display-wrapper"> <!-- Wrapper for all ranks -->
+                <!-- Loop through all ranks and display them -->
                 <div :class="rank.rank" v-for="rank in GameData.ranks" :key="rank">
                     <RankDisplay :rank="rank" />
                 </div>
             </div>
         </div>
         <div class="right-side">
+
+            <!-- Seperate component for divine rank cuz its max rank -->
             <div class="divine-wrapper">
                 <div class="divine-image-wrapper">
                     <img :src="getDivineIMG()" class="divine-image">
@@ -22,14 +25,15 @@
                     </div>
                 </div>
             </div>
+            <!-- Big box of text explaining how ranked works -->
             <div class="info-banner-wrapper">
                 <div class="info-banner">
                     <div class="info-banner-text-wrapper">
                         <div class="info-title">INFO</div>
                         <div class="info-banner-text">
-                            <div>Each player starts at 0 ranked points.</div>
-                            <div>Each game played will cost the player a fee (unless unranked)</div>
-                            <div>Reaching the threshold of 100 ranked points per rank will cause a rank up</div>
+                            <div>1st: +12 | 2nd: +8 | 3rd: +4</div>
+                            <div>Team Kills: +4</div>
+                            <div>Each ranked game costs an RP fee depending on rank</div>
                         </div>
                     </div>
                 </div>
