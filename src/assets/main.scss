@@ -10,4 +10,6 @@ $yellow: rgb(254, 214, 6);
   font-weight: normal;
   color: white;
   user-select: none;
+  display: flex;
+  flex-direction: column;
 }
