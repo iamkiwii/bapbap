@@ -3,29 +3,29 @@
         <div class="champ-wrapper">
 
             <img :src="getImage(champ.name)" class="champ-image" />
-
         </div>
     </div>
 </template>
 
 <script setup>
-import { ChampObject } from '@/assets/GameData.js'
-import Kitsu from '@/assets/champs/images/Kitsu.png'
-import Anna from '@/assets/champs/images/Anna.png'
-import Chuck from '@/assets/champs/images/Chuck.png'
-import Froggy from '@/assets/champs/images/Froggy.png'
-import Sashimi from '@/assets/champs/images/Sashimi.png'
-import Skinny from '@/assets/champs/images/Skinny.png'
-import Sofia from '@/assets/champs/images/Sofia.png'
-import Teevee from '@/assets/champs/images/Teevee.png'
-import Zook from '@/assets/champs/images/Zook.png'
+import { ActiveChampObject } from '@/assets/UserData'
+import Kitsu from '@/assets/champs/images/Kitsu Icon.png'
+import Anna from '@/assets/champs/images/Anna Icon.png'
+import Chuck from '@/assets/champs/images/Chuck Icon.png'
+import Froggy from '@/assets/champs/images/Froggy Icon.png'
+import Sashimi from '@/assets/champs/images/Sashimi Icon.png'
+import Skinny from '@/assets/champs/images/Skinny Icon.png'
+import Sofia from '@/assets/champs/images/Sofia Icon.png'
+import Teevee from '@/assets/champs/images/Teevee Icon.png'
+import Zook from '@/assets/champs/images/Zook Icon.png'
+import Kiddo from '@/assets/champs/images/Kiddo Icon.png'
 </script>
 
 <script>
 
 export default {
     props: {
-        champ: ChampObject
+        champ: ActiveChampObject,
     },
     methods: {
         getImage() {
@@ -48,15 +48,24 @@ export default {
                     return Teevee;
                 case "Zook":
                     return Zook;
+                case "Kiddo":
+                    return Kiddo;
                 default:
                     return Kitsu;
             }
-        }
+        },
+        checkIfActive() {
+            if (this.champ.isActive == true) {
+                return "active"
+            }
+            else {
+                return "inactive"
+            }
+        },
     }
 }
 
 </script>
-
 
 <style lang="scss" scoped>
 .champ-wrapper {
@@ -64,7 +73,7 @@ export default {
 }
 
 .champ-image {
-    width: 10%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -119,6 +128,5 @@ export default {
     //     box-sizing: content-box;
     //     z-index: 2;
     // }
-
 }
 </style>

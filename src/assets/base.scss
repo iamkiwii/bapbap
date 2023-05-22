@@ -18,6 +18,8 @@ $yellow: rgb(254, 214, 6);
     font-family: "Archivo Black", sans-serif;
     color: rgb(9, 34, 56);
     text-decoration: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    backface-visibility: hidden;
 }
 
 // e73851 d13981

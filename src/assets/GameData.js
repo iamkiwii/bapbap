@@ -33,7 +33,7 @@ var GameData = {
     extrastats: {
         Boots: {
             stat: { white: 15, green: 30, blue: 45, purple: 60, yellow: 75 },
-            desc: "% Movement Speed"
+            desc: "% Move Speed"
         },
         Backpack: {
             stat: { white: 10, green: 20, blue: 30, purple: 40, yellow: 50 },
@@ -355,7 +355,7 @@ var CRITItem = {
     type: "CRIT",
     colors: ["white", "green", "blue", "purple", "yellow"],
     name: "Snap",
-    desc: "Attack Speed",
+    desc: "ATK Speed",
     stats: { white: "10%", green: "20%", blue: "30%", purple: "40%", yellow: "50%" }
 }
 

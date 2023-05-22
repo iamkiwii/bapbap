@@ -94,21 +94,27 @@ export default {
 
 <style lang="scss" scoped>
 .I {
-    z-index: 1;
+    backface-visibility: hidden;
 }
 
 .II {
-    z-index: 0;
+    backface-visibility: hidden;
 }
 
 .III {
-    z-index: -1;
+    backface-visibility: hidden;
 }
 
+
+
 .rank-banners:hover {
-    transform: scale(1.3);
+
+    transform: scale(1.3) translate3d(0, 0, 0);
+    z-index: 1;
+    backface-visibility: hidden;
     transition: 0.4s ease-in-out;
     box-shadow: 3px 3px 0px rgba($color: black, $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3), 0px 0px 50px rgba($color: #000000, $alpha: 0.5);
+
 }
 
 .rank-name {
@@ -116,11 +122,11 @@ export default {
     user-select: none;
     text-transform: uppercase;
     text-align: left;
-    margin-left: 10px;
-    font-size: 1.3rem;
+    margin-left: 6%;
+    font-size: 140%;
     text-shadow: 1px 1px 8px rgba($color: #000000, $alpha: 0.3);
     text-decoration: underline;
-    text-underline-offset: 6px;
+    text-underline-offset: 25%;
     margin-bottom: 3%;
 }
 
@@ -129,8 +135,8 @@ export default {
     user-select: none;
     text-transform: uppercase;
     text-align: left;
-    margin-left: 10px;
-    font-size: .9rem;
+    margin-left: 5%;
+    font-size: 90%;
 }
 
 .rank-threshold {
@@ -138,8 +144,8 @@ export default {
     user-select: none;
     text-transform: uppercase;
     text-align: left;
-    margin-left: 10px;
-    font-size: .9rem;
+    margin-left: 5%;
+    font-size: 90%;
 }
 
 .banner-text-wrapper {
@@ -149,7 +155,6 @@ export default {
 
 .Bronze {
     transform: skew(-5deg);
-    margin-bottom: px;
 
     .rank-name {
         user-select: none;
@@ -159,11 +164,7 @@ export default {
 }
 
 .Silver {
-
     transform: skew(-5deg);
-    box-sizing: border-box;
-    mask-border-outset: 5px;
-    border-spacing: 20px;
 
     .rank-name {
         user-select: none;
@@ -173,7 +174,6 @@ export default {
 }
 
 .Gold {
-
     transform: skew(-5deg);
 
     .rank-name {
@@ -185,7 +185,6 @@ export default {
 
 .Royal {
     transform: skew(5deg);
-    margin-right: 10px;
 
     .image-wrapper {
         margin-left: 10%;
@@ -244,7 +243,7 @@ export default {
 }
 
 .rank-banners-wrapper {
-    margin-bottom: 5px;
+    margin-bottom: 2%;
 }
 
 .rank-banners {
@@ -252,9 +251,10 @@ export default {
     transition: 0.1s ease-in-out;
     display: flex;
     flex-direction: column;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    width: 200px;
+    z-index: 0;
+    margin-top: 1%;
+    margin-bottom: 8%;
+    width: 135%;
     height: 80px;
     background-color: rgb(9, 34, 56);
     box-shadow: 3px 3px 0px rgba($color: black, $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3);
@@ -262,7 +262,7 @@ export default {
 }
 
 .rank-wrapper {
-    margin-bottom: 30px;
+    margin-bottom: 10%;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -273,16 +273,17 @@ export default {
 .image-wrapper {
     transform: skew(5deg);
     display: flex;
-    width: 125px;
-    height: 125px;
+    width: 100%;
+    height: 100%;
     margin-top: 10px;
     margin-bottom: 5px;
 }
 
 .image {
+    margin-left: 33.3%;
     user-select: none;
-    width: 100%;
-    height: 100%;
+    width: 125px;
+    height: 125px;
     object-fit: contain;
 }
 </style>
