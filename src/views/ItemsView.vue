@@ -92,10 +92,6 @@ function toggleActive(a) {
 
 }
 
-.item-display {
-    padding-right: 15%;
-}
-
 
 .item-selector-wrapper {
     margin-top: 40px;
