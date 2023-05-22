@@ -1,7 +1,7 @@
 <template>
     <div class="rank-wrapper" :class="getRank()"> <!-- wrapper for each rank to add certain styles to each rank -->
         <div class="image-wrapper">
-            <img :src="getImage()" class="image">
+            <img :src="getImage()" class="image" draggable="false">
         </div>
         <div class="rank-banners-wrapper">
             <div class="rank-banners" v-for="tier in rank.tiers" :key="tier" :class="tier">

@@ -13,7 +13,7 @@
             <!-- Seperate component for divine rank cuz its max rank -->
             <div class="divine-wrapper">
                 <div class="divine-image-wrapper">
-                    <img :src="getDivineIMG()" class="divine-image">
+                    <img :src="getDivineIMG()" class="divine-image" draggable="false">
                 </div>
                 <div class="divine-banners-wrapper">
                     <div class="divine-banners">

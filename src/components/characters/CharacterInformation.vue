@@ -1,11 +1,11 @@
 <template>
     <div class="active-champ-wrapper">
-        <div class="champ-names" >
+        <div class="champ-names">
             <span class="champ-name">{{ champ.name }}</span>
             <span class="champ-nick">{{ champ.nickName }}</span>
         </div>
         <div class="champ-image-wrapper">
-            <img :src="getImage(champ.name)" class="champ-image" :class="champ.name" />
+            <img :src="getImage(champ.name)" class="champ-image" :class="champ.name" draggable="false" />
         </div>
     </div>
 </template>
@@ -74,16 +74,17 @@ export default {
 .active-champ-wrapper {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 90%;
     background-color: #091335;
     transform: skew(-5deg);
     margin: auto 0px;
-    box-shadow: 2px 2px 0px rgba($color: #1d7077, $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3);
+    margin-top: 3%;
+    box-shadow: 5px 5px 0px rgba($color: #1d7077, $alpha: 1), 12px 12px 20px rgba($color: #000000, $alpha: 0.3);
 
 }
 
 .champ-names {
-    width: 175px;
+    width: 15%;
     margin: 15% 10px 60% 10px;
     height: 20px;
     display: flex;
@@ -110,16 +111,43 @@ export default {
     width: 60%;
     height: 100%;
 
+    .Chuck {
+        height: 80%;
+        left: 0;
+        bottom: 0;
+        margin-bottom: 2%;
+        margin-left: 8%;
+        position: absolute;
+    }
+
+    .Anna {
+        height: 75%;
+        left: 0;
+        bottom: 0;
+        margin-bottom: 2%;
+        margin-left: 15%;
+        position: absolute;
+    }
+
+    .Zook {
+        height: 90%;
+        left: 0;
+        bottom: 0;
+        margin-bottom: 1.5%;
+        margin-left: 10%;
+        position: absolute;
+    }
+
     .Froggy {
         margin: auto 0px;
         left: 0;
-        top: 10%;
-        height: 80%;
+        bottom: 0;
+        height: 60%;
         position: absolute;
     }
 
     .Sashimi {
-        top: 10%;
+        bottom: 0;
         left: 0;
         margin: auto 0px;
         height: 80%;
@@ -127,8 +155,38 @@ export default {
     }
 
     .Kitsu {
+        height: 90%;
         left: 3%;
+        bottom: 0;
         position: absolute;
+    }
+
+    .Kiddo {
+        height: 80%;
+        position: absolute;
+        bottom: 0;
+        left: 15%;
+    }
+
+    .Skinny {
+        height: 90%;
+        position: absolute;
+        bottom: 0;
+        left: 8%;
+    }
+
+    .Teevee {
+        height: 90%;
+        position: absolute;
+        bottom: 0;
+        left: 8%;
+    }
+
+    .Sofia {
+        height: 80%;
+        position: absolute;
+        bottom: 0;
+        left: 8%;
     }
 
 }
@@ -137,5 +195,4 @@ export default {
     height: 100%;
     object-fit: contain;
 }
-
 </style>

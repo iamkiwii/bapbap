@@ -15,6 +15,7 @@ $yellow: rgb(254, 214, 6);
 }
 
 * {
+    user-select: none;
     font-family: "Archivo Black", sans-serif;
     color: rgb(9, 34, 56);
     text-decoration: none;

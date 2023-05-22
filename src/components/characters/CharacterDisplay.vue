@@ -2,7 +2,7 @@
     <div :class="checkIfActive()">
         <div class="champ-wrapper">
 
-            <img :src="getImage(champ.name)" class="champ-image" />
+            <img :src="getImage(champ.name)" class="champ-image" draggable="false" />
         </div>
     </div>
 </template>
