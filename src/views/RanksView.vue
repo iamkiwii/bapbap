@@ -27,9 +27,9 @@
                     <div class="info-banner-text-wrapper">
                         <div class="info-title">INFO</div>
                         <div class="info-banner-text">
-                            <div>Each player starts at 0 ranked points.</div>
-                            <div>Each game played will cost the player a fee (unless unranked)</div>
-                            <div>Reaching the threshold of 100 ranked points per rank will cause a rank up</div>
+                            <div>1st: +12 | 2nd: +8 | 3rd: +4</div>
+                            <div>Team Kills: +4</div>
+                            <div>Each ranked game costs an RP fee depending on rank</div>
                         </div>
                     </div>
                 </div>
