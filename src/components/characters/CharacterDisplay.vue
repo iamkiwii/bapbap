@@ -102,13 +102,15 @@ export default {
 }
 
 .inactive {
+    box-sizing: border-box;
     border: 0;
     cursor: pointer;
     transition: 0.2s ease-in;
 }
 
 .inactive:hover {
-    border: white solid 2px;
-    transition: 0.1s ease-in;
+    box-sizing: border-box;
+    border: white solid 3px;
+    transition: 0.2s ease-in-out;
 }
 </style>
