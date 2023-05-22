@@ -5,13 +5,6 @@
         </div>
     </div>
 
-
-
-    <div class="item-type-banner">
-        <div v-for="types in GameData.itemtypes" :key="types">
-            <h1>{{ types }}</h1>
-        </div>
-    </div>
     <div class="item-display-wrapper">
         <div class="item-display" v-for="item in GameData.itemlist" :key="item">
             <ItemDisplay :item="item" :key="updateKey" />
@@ -78,22 +71,25 @@ function toggleActive(a) {
 
 
 <style lang="scss" scoped>
-.test {
-    color: white;
-    font-size: 30px;
+.item-display {
+    width: 20%;
+}
+
+.item-type-banner {
+    width: 20%;
+    text-align: center;
+}
+
+.item-types-wrapper {
+    display: flex;
+    flex-direction: row;
 }
 
 .item-display-wrapper {
+    margin-top: 3%;
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 100%;
-    //position: relative;
-    top: 0;
-    left: 0;
     transition: all 0.5s ease;
-    margin-top: 40px;
-
 }
 
 
