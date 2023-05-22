@@ -1,9 +1,13 @@
 <template>
     <div class="item-containers">
-        <div class="circle hidden" :class="color" @click="(e) => expandItems(e)">
+
+        <!-- Item container circle that gets created for each tier -->
+        <div class="circle" :class="color">
             <img :src="getImage()" class="item" draggable="false" :class="type">
         </div>
-        <div class="item-info hidden-banner" :class="getBannerColor()">
+
+        <!-- Item info that gets created for each tier -->
+        <div class="item-info" :class="getBannerColor()">
             <div class="item-name">{{ name }}</div>
             <div class="item-desc">{{ getInfo() }}</div>
             <div class="item-desc">{{ getStats() }}</div>
@@ -12,6 +16,8 @@
 </template>
 
 <script setup>
+
+// i know
 import Item_Backpack_CDR from '@/assets/items/Item_Backpack_CDR.png'
 import Item_Backpack_CRIT from '@/assets/items/Item_Backpack_CRIT.png'
 import Item_Backpack_HP from '@/assets/items/Item_Backpack_HP.png'
@@ -31,105 +37,6 @@ import GameData from '@/assets/GameData'
 </script>
 <script scoped>
 
-function expandItems(event) {
-    var column = getColumn(event.currentTarget)
-    if (event.currentTarget.classList.contains('white')) {
-        for (let i = 0; i < 5; i++) {
-            if (i != column) {
-                document.getElementsByClassName('white-banner')[i].classList.add('hidden-banner')
-                document.getElementsByClassName('white-banner')[i].classList.remove('expanded-banner')
-                document.getElementsByClassName('green-banner')[i].classList.add('hidden-banner')
-                document.getElementsByClassName('green-banner')[i].classList.remove('expanded-banner')
-                document.getElementsByClassName('blue-banner')[i].classList.add('hidden-banner')
-                document.getElementsByClassName('blue-banner')[i].classList.remove('expanded-banner')
-                document.getElementsByClassName('purple-banner')[i].classList.add('hidden-banner')
-                document.getElementsByClassName('purple-banner')[i].classList.remove('expanded-banner')
-                document.getElementsByClassName('yellow-banner')[i].classList.add('hidden-banner')
-                document.getElementsByClassName('yellow-banner')[i].classList.remove('expanded-banner')
-                document.getElementsByClassName('white')[i].classList.add('hidden')
-                document.getElementsByClassName('white')[i].classList.remove('expanded')
-                document.getElementsByClassName('green')[i].classList.add('hidden')
-                document.getElementsByClassName('green')[i].classList.remove('expanded')
-                document.getElementsByClassName('blue')[i].classList.add('hidden')
-                document.getElementsByClassName('blue')[i].classList.remove('expanded')
-                document.getElementsByClassName('purple')[i].classList.add('hidden')
-                document.getElementsByClassName('purple')[i].classList.remove('expanded')
-                document.getElementsByClassName('yellow')[i].classList.add('hidden')
-                document.getElementsByClassName('yellow')[i].classList.remove('expanded')
-            }
-        }
-        if (document.getElementsByClassName('white')[column].classList.contains('hidden') == true) {
-            document.getElementsByClassName('white-banner')[column].classList.add('expanded-banner')
-            document.getElementsByClassName('white-banner')[column].classList.remove('hidden-banner')
-            document.getElementsByClassName('green-banner')[column].classList.add('expanded-banner')
-            document.getElementsByClassName('green-banner')[column].classList.remove('hidden-banner')
-            document.getElementsByClassName('blue-banner')[column].classList.add('expanded-banner')
-            document.getElementsByClassName('blue-banner')[column].classList.remove('hidden-banner')
-            document.getElementsByClassName('purple-banner')[column].classList.add('expanded-banner')
-            document.getElementsByClassName('purple-banner')[column].classList.remove('hidden-banner')
-            document.getElementsByClassName('yellow-banner')[column].classList.add('expanded-banner')
-            document.getElementsByClassName('yellow-banner')[column].classList.remove('hidden-banner')
-            document.getElementsByClassName('white')[column].classList.add('expanded')
-            document.getElementsByClassName('white')[column].classList.remove('hidden')
-            document.getElementsByClassName('green')[column].classList.add('expanded')
-            document.getElementsByClassName('green')[column].classList.remove('hidden')
-            document.getElementsByClassName('blue')[column].classList.add('expanded')
-            document.getElementsByClassName('blue')[column].classList.remove('hidden')
-            document.getElementsByClassName('purple')[column].classList.add('expanded')
-            document.getElementsByClassName('purple')[column].classList.remove('hidden')
-            document.getElementsByClassName('yellow')[column].classList.add('expanded')
-            document.getElementsByClassName('yellow')[column].classList.remove('hidden')
-        } else {
-            document.getElementsByClassName('white-banner')[column].classList.remove('expanded-banner')
-            document.getElementsByClassName('white-banner')[column].classList.add('hidden-banner')
-            document.getElementsByClassName('green-banner')[column].classList.remove('expanded-banner')
-            document.getElementsByClassName('green-banner')[column].classList.add('hidden-banner')
-            document.getElementsByClassName('blue-banner')[column].classList.remove('expanded-banner')
-            document.getElementsByClassName('blue-banner')[column].classList.add('hidden-banner')
-            document.getElementsByClassName('purple-banner')[column].classList.remove('expanded-banner')
-            document.getElementsByClassName('purple-banner')[column].classList.add('hidden-banner')
-            document.getElementsByClassName('yellow-banner')[column].classList.remove('expanded-banner')
-            document.getElementsByClassName('yellow-banner')[column].classList.add('hidden-banner')
-            document.getElementsByClassName('white')[column].classList.remove('expanded')
-            document.getElementsByClassName('white')[column].classList.add('hidden')
-            document.getElementsByClassName('green')[column].classList.remove('expanded')
-            document.getElementsByClassName('green')[column].classList.add('hidden')
-            document.getElementsByClassName('blue')[column].classList.remove('expanded')
-            document.getElementsByClassName('blue')[column].classList.add('hidden')
-            document.getElementsByClassName('purple')[column].classList.remove('expanded')
-            document.getElementsByClassName('purple')[column].classList.add('hidden')
-            document.getElementsByClassName('yellow')[column].classList.remove('expanded')
-            document.getElementsByClassName('yellow')[column].classList.add('hidden')
-        }
-    }
-}
-
-
-function getColumn(element) {
-    var num;
-    switch (element) {
-        case document.getElementsByClassName('white')[0]:
-            num = 0;
-            break;
-        case document.getElementsByClassName('white')[1]:
-            num = 1;
-            break;
-        case document.getElementsByClassName('white')[2]:
-            num = 2;
-            break;
-        case document.getElementsByClassName('white')[3]:
-            num = 3;
-            break;
-        case document.getElementsByClassName('white')[4]:
-            num = 4;
-            break;
-    }
-    return num;
-
-}
-
-
-
 export default {
     props: {
         filename: String,
@@ -143,16 +50,13 @@ export default {
         getImage() {
             return getImageURL(this.filename)
         },
-        getBannerColor() {
+        getBannerColor() { // Returns color and adds -banner to give the banner class
             return this.color + "-banner"
         },
-        expandItems(event) {
-            expandItems(event)
-        },
-        getInfo() {
+        getInfo() { // Returns the stats and description of the item for the banner
             return this.stats[this.color] + " " + this.desc
         },
-        getStats() {
+        getStats() { // Gets extra stats (Hat is CDR, etc.)
             let t = this.type
             if (t == undefined) {
                 return GameData.extrastats["Hat"].stat[this.color] + GameData.extrastats["Hat"].desc
@@ -247,20 +151,6 @@ function getImageURL(file) {
     margin-left: 10px;
 }
 
-.hidden-banner {
-    visibility: hidden;
-    left: -50px;
-    opacity: -100%;
-    transition: 0.2s ease-in-out;
-}
-
-.expanded-banner {
-    visibility: visible;
-    opacity: 100%;
-    transition: 0.4s ease-in-out;
-    left: 0;
-}
-
 .item-info {
     user-select: none;
     color: rgb(9, 34, 56);
@@ -268,30 +158,9 @@ function getImageURL(file) {
     transform: skew(-5deg);
     height: 70px;
     width: 200px;
-    // background-color: rgb(9, 34, 56);
-    // box-shadow: 3px 3px 0px rgba($color: black, $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3);
-    position: absolute;
     margin-top: 0px;
     margin-left: 100px;
     z-index: -1;
-}
-
-.hidden {
-    top: 0px;
-    margin-top: 10px;
-    cursor: pointer;
-    visibility: hidden;
-    opacity: 0%;
-    position: relative;
-    transition: 0.2s ease-in-out;
-}
-
-.expanded {
-    top: 70px;
-    margin-top: 30px;
-    opacity: 100%;
-    position: relative;
-    transition: 0.2s ease-in-out;
 }
 
 .circle {
