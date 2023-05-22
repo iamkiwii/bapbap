@@ -31,7 +31,7 @@ var GameData = {
         },
         Hat: {
             stat: { white: 15, green: 30, blue: 45, purple: 60, yellow: 75 },
-            desc: "% CDR"
+            desc: "CDR"
         }
     }
 }
