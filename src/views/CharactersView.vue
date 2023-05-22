@@ -33,18 +33,6 @@ export default {
 
 </script>
 
-<script>
-
-export default {
-    data() {
-        return {
-            GameData: GameData
-        }
-    },
-}
-
-</script>
-
 
 <style lang="scss" scoped>
 .character-container {

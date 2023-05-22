@@ -8,7 +8,7 @@
 
 
     <div class="item-type-banner">
-        <div v-for="types in GameData.itemtypes" :key="type">
+        <div v-for="types in GameData.itemtypes" :key="types">
             <h1>{{ types }}</h1>
         </div>
     </div>
