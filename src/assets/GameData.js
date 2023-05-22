@@ -19,6 +19,7 @@ export class RankObject {
 
 var GameData = {
     itemlist: [],
+    itemtypes: { CDR: "CHRONO", CRIT: "SNAP", DMG: "SHARP", HP: "BULKY", LS: "VAMP" },
     ranks: [],
     extrastats: {
         Boots: {

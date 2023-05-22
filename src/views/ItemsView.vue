@@ -7,7 +7,11 @@
 
 
 
-
+    <div class="item-type-banner">
+        <div v-for="types in GameData.itemtypes" :key="type">
+            <h1>{{ types }}</h1>
+        </div>
+    </div>
     <div class="item-display-wrapper">
         <div v-for="item in GameData.itemlist" :key="item">
             <ItemDisplay :item="item" :key="updateKey" />
