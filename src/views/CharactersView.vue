@@ -70,10 +70,10 @@ function toggleActive(a) {
 
 <style lang="scss" scoped>
 .character-selector {
-    width: 8%;
-    height: fit-content;
-    padding: 10px;
-    margin: auto 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
 
 }
 
