@@ -153,7 +153,7 @@ function getImageURL(file) {
     transform: skew(5deg);
     font-size: 15px;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 5%;
 }
 
 .item-info {
@@ -162,9 +162,9 @@ function getImageURL(file) {
     text-align: center;
     transform: skew(-5deg);
     height: 70px;
-    width: 200px;
+    width: 150px;
     margin-top: 0px;
-    margin-left: 30px;
+    margin-left: 10px;
     z-index: -1;
 }
 
