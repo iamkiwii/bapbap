@@ -3,15 +3,16 @@
 
         <div class="active-champ-display">
 
-
+            <CharacterInformation :champ="getActiveChampObject(UserData.CurrentActiveChamp)" />
 
         </div>
 
 
-
-        <div class="character-selector" v-for="ActiveChampObject in UserData.ActiveChamps" :key="ActiveChampObject">
-            <div class="temporary"></div>
-            <CharacterDisplay :champ="ActiveChampObject" :key="updateKey" @click="toggleActiveItem(ActiveChampObject)" />
+        <div class="character-selector-wrapper" >
+            <div class="character-selector" v-for="ActiveChampObject in UserData.ActiveChamps" :key="ActiveChampObject">
+                <div class="temporary"></div>
+                <CharacterDisplay :champ="ActiveChampObject" :key="updateKey" @click="toggleActiveItem(ActiveChampObject)" />
+            </div>
         </div>
     </div>
 </template>
@@ -21,6 +22,7 @@ import GameData from '@/assets/GameData.js'
 import UserData from '@/assets/UserData.js';
 import { ActiveChampObject } from '@/assets/UserData.js';
 import CharacterDisplay from '@/components/characters/CharacterDisplay.vue';
+import CharacterInformation from '@/components/characters/CharacterInformation.vue';
 </script>
 
 <script>
@@ -50,7 +52,7 @@ export default {
 }
 
 function toggleActive(a) {
-    UserData.currentActiveChamp = a.name
+    UserData.CurrentActiveChamp = a.name
     if (a.isActive == true) {
         return;
     }
@@ -62,6 +64,14 @@ function toggleActive(a) {
         }
     }
     a.isActive = true;
+}
+
+function getActiveChampObject(champName) {
+    for( let champ of UserData.ActiveChamps ) {
+        if ( champName === champ.name ) {
+            return champ
+        }
+    }
 }
 
 
@@ -77,10 +87,19 @@ function toggleActive(a) {
 
 }
 
+.character-selector-wrapper {
+    display: flex;
+}
+
+.active-champ-display {
+    padding-top: 10px;
+    height: 715px;
+}
+
 .view-wrapper {
     height: 100%;
     width: 100%;
-    display: flex;
+    display: grid;
     align-items: center;
 }
 </style>

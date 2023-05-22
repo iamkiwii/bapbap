@@ -113,4 +113,8 @@ export default {
     border: white solid 3px;
     transition: 0.2s ease-in-out;
 }
+
+.current-champ {
+    height: 500px;
+}
 </style>
