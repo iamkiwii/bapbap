@@ -40,10 +40,12 @@ export default {
         ItemDisplay
     },
     methods: {
+        // Toggles active item in UserData.ActiveItems then forces a re-render of the ItemSelector component
         toggleActiveItem(item) {
             toggleActive(item);
             this.forceRender();
         },
+        // Forces a re-render of the ItemSelector component
         forceRender() {
             this.updateKey++;
         }

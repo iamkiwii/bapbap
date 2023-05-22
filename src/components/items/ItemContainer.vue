@@ -1,9 +1,13 @@
 <template>
     <div class="item-containers">
-        <div :id="color" class="circle hidden" :class="color" @click="(e) => expandItems(e)">
+
+        <!-- Item container circle that gets created for each tier -->
+        <div class="circle" :class="color">
             <img :src="getImage()" class="item" draggable="false" :class="type">
         </div>
-        <div class="item-info hidden-banner" :class="getBannerColor()">
+
+        <!-- Item info that gets created for each tier -->
+        <div class="item-info" :class="getBannerColor()">
             <div class="item-name">{{ name }}</div>
             <div class="item-desc">{{ getInfo() }}</div>
             <div class="item-desc">{{ getStats() }}</div>
@@ -12,6 +16,8 @@
 </template>
 
 <script setup>
+
+// i know
 import Item_Backpack_CDR from '@/assets/items/Item_Backpack_CDR.png'
 import Item_Backpack_CRIT from '@/assets/items/Item_Backpack_CRIT.png'
 import Item_Backpack_HP from '@/assets/items/Item_Backpack_HP.png'
@@ -44,13 +50,13 @@ export default {
         getImage() {
             return getImageURL(this.filename)
         },
-        getBannerColor() {
+        getBannerColor() { // Returns color and adds -banner to give the banner class
             return this.color + "-banner"
         },
-        getInfo() {
+        getInfo() { // Returns the stats and description of the item for the banner
             return this.stats[this.color] + " " + this.desc
         },
-        getStats() {
+        getStats() { // Gets extra stats (Hat is CDR, etc.)
             let t = this.type
             if (t == undefined) {
                 return GameData.extrastats["Hat"].stat[this.color] + GameData.extrastats["Hat"].desc
@@ -150,13 +156,6 @@ function getImageURL(file) {
     margin-left: 10px;
 }
 
-.expanded-banner {
-    visibility: visible;
-    opacity: 100%;
-    transition: 0.4s ease-in-out;
-    left: 0;
-}
-
 .item-info {
     user-select: none;
     color: rgb(9, 34, 56);
@@ -164,20 +163,9 @@ function getImageURL(file) {
     transform: skew(-5deg);
     height: 70px;
     width: 200px;
-    // background-color: rgb(9, 34, 56);
-    // box-shadow: 3px 3px 0px rgba($color: black, $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3);
-    position: absolute;
     margin-top: 0px;
     margin-left: 100px;
     z-index: -1;
-}
-
-.expanded {
-    top: 70px;
-    margin-top: 30px;
-    opacity: 100%;
-    position: relative;
-    transition: 0.2s ease-in-out;
 }
 
 .circle {
