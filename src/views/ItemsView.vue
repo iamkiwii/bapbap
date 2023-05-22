@@ -9,7 +9,7 @@
 
 
     <div class="item-display-wrapper">
-        <div v-for="item in GameData.itemlist" :key="item">
+        <div class="item-display" v-for="item in GameData.itemlist" :key="item">
             <ItemDisplay :item="item" :key="updateKey" />
         </div>
     </div>
@@ -82,12 +82,16 @@ function toggleActive(a) {
     flex-direction: row;
     width: 100%;
     height: 100%;
-    position: relative;
+    //position: relative;
     top: 0;
     left: 0;
     transition: all 0.5s ease;
     margin-top: 40px;
 
+}
+
+.item-display {
+    padding-right: 15%;
 }
 
 

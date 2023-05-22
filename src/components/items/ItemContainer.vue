@@ -1,6 +1,6 @@
 <template>
     <div class="item-containers">
-        <div class="circle hidden" :class="color" @click="(e) => expandItems(e)">
+        <div :id="color" class="circle hidden" :class="color" @click="(e) => expandItems(e)">
             <img :src="getImage()" class="item" draggable="false" :class="type">
         </div>
         <div class="item-info hidden-banner" :class="getBannerColor()">
@@ -31,105 +31,6 @@ import GameData from '@/assets/GameData'
 </script>
 <script scoped>
 
-function expandItems(event) {
-    var column = getColumn(event.currentTarget)
-    if (event.currentTarget.classList.contains('white')) {
-        for (let i = 0; i < 5; i++) {
-            if (i != column) {
-                document.getElementsByClassName('white-banner')[i].classList.add('hidden-banner')
-                document.getElementsByClassName('white-banner')[i].classList.remove('expanded-banner')
-                document.getElementsByClassName('green-banner')[i].classList.add('hidden-banner')
-                document.getElementsByClassName('green-banner')[i].classList.remove('expanded-banner')
-                document.getElementsByClassName('blue-banner')[i].classList.add('hidden-banner')
-                document.getElementsByClassName('blue-banner')[i].classList.remove('expanded-banner')
-                document.getElementsByClassName('purple-banner')[i].classList.add('hidden-banner')
-                document.getElementsByClassName('purple-banner')[i].classList.remove('expanded-banner')
-                document.getElementsByClassName('yellow-banner')[i].classList.add('hidden-banner')
-                document.getElementsByClassName('yellow-banner')[i].classList.remove('expanded-banner')
-                document.getElementsByClassName('white')[i].classList.add('hidden')
-                document.getElementsByClassName('white')[i].classList.remove('expanded')
-                document.getElementsByClassName('green')[i].classList.add('hidden')
-                document.getElementsByClassName('green')[i].classList.remove('expanded')
-                document.getElementsByClassName('blue')[i].classList.add('hidden')
-                document.getElementsByClassName('blue')[i].classList.remove('expanded')
-                document.getElementsByClassName('purple')[i].classList.add('hidden')
-                document.getElementsByClassName('purple')[i].classList.remove('expanded')
-                document.getElementsByClassName('yellow')[i].classList.add('hidden')
-                document.getElementsByClassName('yellow')[i].classList.remove('expanded')
-            }
-        }
-        if (document.getElementsByClassName('white')[column].classList.contains('hidden') == true) {
-            document.getElementsByClassName('white-banner')[column].classList.add('expanded-banner')
-            document.getElementsByClassName('white-banner')[column].classList.remove('hidden-banner')
-            document.getElementsByClassName('green-banner')[column].classList.add('expanded-banner')
-            document.getElementsByClassName('green-banner')[column].classList.remove('hidden-banner')
-            document.getElementsByClassName('blue-banner')[column].classList.add('expanded-banner')
-            document.getElementsByClassName('blue-banner')[column].classList.remove('hidden-banner')
-            document.getElementsByClassName('purple-banner')[column].classList.add('expanded-banner')
-            document.getElementsByClassName('purple-banner')[column].classList.remove('hidden-banner')
-            document.getElementsByClassName('yellow-banner')[column].classList.add('expanded-banner')
-            document.getElementsByClassName('yellow-banner')[column].classList.remove('hidden-banner')
-            document.getElementsByClassName('white')[column].classList.add('expanded')
-            document.getElementsByClassName('white')[column].classList.remove('hidden')
-            document.getElementsByClassName('green')[column].classList.add('expanded')
-            document.getElementsByClassName('green')[column].classList.remove('hidden')
-            document.getElementsByClassName('blue')[column].classList.add('expanded')
-            document.getElementsByClassName('blue')[column].classList.remove('hidden')
-            document.getElementsByClassName('purple')[column].classList.add('expanded')
-            document.getElementsByClassName('purple')[column].classList.remove('hidden')
-            document.getElementsByClassName('yellow')[column].classList.add('expanded')
-            document.getElementsByClassName('yellow')[column].classList.remove('hidden')
-        } else {
-            document.getElementsByClassName('white-banner')[column].classList.remove('expanded-banner')
-            document.getElementsByClassName('white-banner')[column].classList.add('hidden-banner')
-            document.getElementsByClassName('green-banner')[column].classList.remove('expanded-banner')
-            document.getElementsByClassName('green-banner')[column].classList.add('hidden-banner')
-            document.getElementsByClassName('blue-banner')[column].classList.remove('expanded-banner')
-            document.getElementsByClassName('blue-banner')[column].classList.add('hidden-banner')
-            document.getElementsByClassName('purple-banner')[column].classList.remove('expanded-banner')
-            document.getElementsByClassName('purple-banner')[column].classList.add('hidden-banner')
-            document.getElementsByClassName('yellow-banner')[column].classList.remove('expanded-banner')
-            document.getElementsByClassName('yellow-banner')[column].classList.add('hidden-banner')
-            document.getElementsByClassName('white')[column].classList.remove('expanded')
-            document.getElementsByClassName('white')[column].classList.add('hidden')
-            document.getElementsByClassName('green')[column].classList.remove('expanded')
-            document.getElementsByClassName('green')[column].classList.add('hidden')
-            document.getElementsByClassName('blue')[column].classList.remove('expanded')
-            document.getElementsByClassName('blue')[column].classList.add('hidden')
-            document.getElementsByClassName('purple')[column].classList.remove('expanded')
-            document.getElementsByClassName('purple')[column].classList.add('hidden')
-            document.getElementsByClassName('yellow')[column].classList.remove('expanded')
-            document.getElementsByClassName('yellow')[column].classList.add('hidden')
-        }
-    }
-}
-
-
-function getColumn(element) {
-    var num;
-    switch (element) {
-        case document.getElementsByClassName('white')[0]:
-            num = 0;
-            break;
-        case document.getElementsByClassName('white')[1]:
-            num = 1;
-            break;
-        case document.getElementsByClassName('white')[2]:
-            num = 2;
-            break;
-        case document.getElementsByClassName('white')[3]:
-            num = 3;
-            break;
-        case document.getElementsByClassName('white')[4]:
-            num = 4;
-            break;
-    }
-    return num;
-
-}
-
-
-
 export default {
     props: {
         filename: String,
@@ -145,9 +46,6 @@ export default {
         },
         getBannerColor() {
             return this.color + "-banner"
-        },
-        expandItems(event) {
-            expandItems(event)
         },
         getInfo() {
             return this.stats[this.color] + " " + this.desc
@@ -228,6 +126,11 @@ function getImageURL(file) {
     margin-left: 13px !important;
 }
 
+.item-containers {
+    padding: 10px;
+    display: flex;
+}
+
 .item-name {
     transform: skew(5deg);
     font-size: 20px;
@@ -245,13 +148,6 @@ function getImageURL(file) {
     font-size: 15px;
     text-align: left;
     margin-left: 10px;
-}
-
-.hidden-banner {
-    visibility: hidden;
-    left: -50px;
-    opacity: -100%;
-    transition: 0.2s ease-in-out;
 }
 
 .expanded-banner {
@@ -274,16 +170,6 @@ function getImageURL(file) {
     margin-top: 0px;
     margin-left: 100px;
     z-index: -1;
-}
-
-.hidden {
-    top: 0px;
-    margin-top: 10px;
-    cursor: pointer;
-    visibility: hidden;
-    opacity: 0%;
-    position: relative;
-    transition: 0.2s ease-in-out;
 }
 
 .expanded {
