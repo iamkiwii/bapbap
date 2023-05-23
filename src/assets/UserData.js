@@ -88,7 +88,7 @@ var Anna = {
     abilities: {
         basic: {
             name: "Run N' Gun",
-            desc: "Fire 4 smal bullets."
+            desc: "Fire 4 small bullets."
         },
         special: {
             name: "Eat Lead",
