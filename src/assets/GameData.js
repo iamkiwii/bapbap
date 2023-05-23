@@ -77,7 +77,7 @@ var Anna = {
     abilities: {
         basic: {
             name: "Run N' Gun",
-            desc: "Fire 4 smal bullets."
+            desc: "Fire 4 small bullets."
         },
         special: {
             name: "Eat Lead",
@@ -365,7 +365,7 @@ var CRITItem = {
     type: "CRIT",
     colors: ["white", "green", "blue", "purple", "yellow"],
     name: "Snap",
-    desc: "ATK Speed",
+    desc: "Attack Speed",
     stats: { white: "10%", green: "20%", blue: "30%", purple: "40%", yellow: "50%" }
 }
 
