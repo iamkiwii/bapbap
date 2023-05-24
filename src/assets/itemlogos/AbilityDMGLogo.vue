@@ -1,5 +1,5 @@
 <template>
-    <div class="material-symbols-rounded">
+    <div class="material-symbols-outlined">
         swords
     </div>
 </template>
@@ -21,11 +21,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.material-symbols-rounded {
+.material-symbols-outlined {
     font-size: inherit;
-    color: #b2090d;
-    text-decoration: underline;
-    text-shadow: 2px 2px 0px rgba($color: #7a0608, $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3);
+    color: white;
 }
 
 //background-color: #b2090d;

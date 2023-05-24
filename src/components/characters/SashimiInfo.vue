@@ -10,7 +10,7 @@
                 <div class="nickname">{{ champ.nickname }}</div>
             </div>
             <div class="image-wrapper">
-                <img :src="Champ" class="image" draggable="false" />
+                <img :src="Champ" class="image" id="fuck-you2" draggable="false" />
             </div>
         </div>
         <div class="seperator"></div>
@@ -38,7 +38,7 @@
                     </div>
                     <div class="text-wrapper">
                         <div class="ability-name-wrapper">
-                            <div class="ability-name">{{ abilities.special.name }}</div>
+                            <div class="ability-name" id="fuck-you">{{ abilities.special.name }}</div>
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.special.damage }} <div class="scaling">
                                     {{ abilities.special.scaling }}</div>
@@ -84,14 +84,14 @@
                 <div class="text"> BEST BUILDS </div>
                 <div class="build">
                     <div class="items">
-                        <HealthLogo />
                         <ASLogo />
+                        <VampLogo />
                         <VampLogo />
                     </div>
                     <div class="items">
-                        <HealthLogo />
                         <ASLogo />
-                        <DMGLogo />
+                        <VampLogo />
+                        <HealthLogo />
                     </div>
                 </div>
             </div>
@@ -100,50 +100,50 @@
 </template>
 
 <script setup>
-import Champ from '@/assets/champs/Chuck/Chuck.png'
-import Basic from '@/assets/champs/Chuck/Chuck_Lmb_Sprite.png'
-import Special from '@/assets/champs/Chuck/Chuck_Q_Sprite.png'
-import Movement from '@/assets/champs/Chuck/Chuck_Space_Sprite.png'
-import Ultimate from '@/assets/champs/Chuck/Chuck_E_Sprite.png'
+import Champ from '@/assets/champs/Sashimi/Sashimi.png'
+import Basic from '@/assets/champs/Sashimi/Sashimi_Lmb_Sprite.png'
+import Special from '@/assets/champs/Sashimi/Sashimi_Q_Sprite.png'
+import Movement from '@/assets/champs/Sashimi/Sashimi_Space_Sprite.png'
+import Ultimate from '@/assets/champs/Sashimi/Sashimi_E_Sprite.png'
 import HealthLogo from '@/assets/itemlogos/HealthLogo.vue'
 import ASLogo from '@/assets/itemlogos/ASLogo.vue'
 import VampLogo from '@/assets/itemlogos/VampLogo.vue'
 import DMGLogo from '@/assets/itemlogos/DMGLogo.vue'
 import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
-import Characters from '@/components/characters/Characters.scss'
 import { reactive } from 'vue'
+import Characters from '@/components/characters/Characters.scss'
 
 const champ = reactive({
-    name: 'Chuck',
-    hp: 1250,
-    nickname: 'Chuck.'
+    name: 'Sashimi',
+    hp: 800,
+    nickname: 'Upgraded Fishtank'
 })
 
 const abilities = reactive({
     basic: {
-        name: 'Chuck Punch',
+        name: 'Chop Chop',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Punch for a 3-hit combo. Hitting an opponent will grant you a Knock stack.'
+        info: 'Punch for a 3-hit combo.'
     },
     special: {
-        name: 'Chuck Knock',
+        name: 'Ginger Aftertaste',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Throw a powerful punch. Inflict stun if you have full Knock stacks.'
+        info: 'Clap enemies in front of you. Apply stun and weaken on hit.'
     },
     movement: {
-        name: 'Chuck Jump',
+        name: 'Sushi Roll',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Jump to a location. Apply knock up on land.'
+        info: 'Charge a dash, deal damage and slow targets along the way.'
     },
     ultimate: {
-        name: 'CHUCK!!!!',
+        name: 'Tempura Shock',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Become gigantic and get an hp, damage and speed buff.'
+        info: 'Jump and slam into an area. On hit, knock up enemies and shield yourself and allies.'
     }
 })
 
@@ -159,4 +159,14 @@ export default {
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#fuck-you {
+    font-size: 1.8rem;
+}
+
+#fuck-you2 {
+
+    width: 130%;
+
+}
+</style>

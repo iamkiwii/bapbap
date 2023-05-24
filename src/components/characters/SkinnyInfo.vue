@@ -84,14 +84,14 @@
                 <div class="text"> BEST BUILDS </div>
                 <div class="build">
                     <div class="items">
-                        <HealthLogo />
-                        <ASLogo />
+                        <DMGLogo />
                         <VampLogo />
+                        <DMGLogo />
                     </div>
                     <div class="items">
-                        <HealthLogo />
-                        <ASLogo />
                         <DMGLogo />
+                        <VampLogo />
+                        <ASLogo />
                     </div>
                 </div>
             </div>
@@ -100,50 +100,50 @@
 </template>
 
 <script setup>
-import Champ from '@/assets/champs/Chuck/Chuck.png'
-import Basic from '@/assets/champs/Chuck/Chuck_Lmb_Sprite.png'
-import Special from '@/assets/champs/Chuck/Chuck_Q_Sprite.png'
-import Movement from '@/assets/champs/Chuck/Chuck_Space_Sprite.png'
-import Ultimate from '@/assets/champs/Chuck/Chuck_E_Sprite.png'
+import Champ from '@/assets/champs/Skinny/Skinny.png'
+import Basic from '@/assets/champs/Skinny/Skinny_Lmb_Sprite.png'
+import Special from '@/assets/champs/Skinny/Skinny_Q_Sprite.png'
+import Movement from '@/assets/champs/Skinny/Skinny_Space_Sprite.png'
+import Ultimate from '@/assets/champs/Skinny/Skinny_E_Sprite.png'
 import HealthLogo from '@/assets/itemlogos/HealthLogo.vue'
 import ASLogo from '@/assets/itemlogos/ASLogo.vue'
 import VampLogo from '@/assets/itemlogos/VampLogo.vue'
 import DMGLogo from '@/assets/itemlogos/DMGLogo.vue'
 import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
-import Characters from '@/components/characters/Characters.scss'
 import { reactive } from 'vue'
+import Characters from '@/components/characters/Characters.scss'
 
 const champ = reactive({
-    name: 'Chuck',
-    hp: 1250,
-    nickname: 'Chuck.'
+    name: 'Skinny',
+    hp: 800,
+    nickname: 'Shadow Walker'
 })
 
 const abilities = reactive({
     basic: {
-        name: 'Chuck Punch',
+        name: 'Reap',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Punch for a 3-hit combo. Hitting an opponent will grant you a Knock stack.'
+        info: 'Slash for a 2-hit combo.'
     },
     special: {
-        name: 'Chuck Knock',
+        name: 'Claw',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Throw a powerful punch. Inflict stun if you have full Knock stacks.'
+        info: 'Slice the ground. Apply Exposed on hit.'
     },
     movement: {
-        name: 'Chuck Jump',
-        damage: 999,
-        scaling: '(0.6)',
-        info: 'Jump to a location. Apply knock up on land.'
+        name: 'Shadow Walk',
+        damage: "N/A",
+        scaling: '(N/A)',
+        info: 'Become invisible and gain speed.'
     },
     ultimate: {
-        name: 'CHUCK!!!!',
+        name: 'RIP',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Become gigantic and get an hp, damage and speed buff.'
+        info: 'Dash forward and slash in front of you.'
     }
 })
 

@@ -84,14 +84,14 @@
                 <div class="text"> BEST BUILDS </div>
                 <div class="build">
                     <div class="items">
-                        <HealthLogo />
-                        <ASLogo />
                         <VampLogo />
+                        <VampLogo />
+                        <DMGLogo />
                     </div>
                     <div class="items">
-                        <HealthLogo />
-                        <ASLogo />
-                        <DMGLogo />
+                        <VampLogo />
+                        <VampLogo />
+                        <VampLogo />
                     </div>
                 </div>
             </div>
@@ -100,50 +100,50 @@
 </template>
 
 <script setup>
-import Champ from '@/assets/champs/Chuck/Chuck.png'
-import Basic from '@/assets/champs/Chuck/Chuck_Lmb_Sprite.png'
-import Special from '@/assets/champs/Chuck/Chuck_Q_Sprite.png'
-import Movement from '@/assets/champs/Chuck/Chuck_Space_Sprite.png'
-import Ultimate from '@/assets/champs/Chuck/Chuck_E_Sprite.png'
+import Champ from '@/assets/champs/Sofia/Sofia.png'
+import Basic from '@/assets/champs/Sofia/Sofia_Lmb_Sprite.png'
+import Special from '@/assets/champs/Sofia/Sofia_Q_Sprite.png'
+import Movement from '@/assets/champs/Sofia/Sofia_Space_Sprite.png'
+import Ultimate from '@/assets/champs/Sofia/Sofia_E_Sprite.png'
 import HealthLogo from '@/assets/itemlogos/HealthLogo.vue'
 import ASLogo from '@/assets/itemlogos/ASLogo.vue'
 import VampLogo from '@/assets/itemlogos/VampLogo.vue'
 import DMGLogo from '@/assets/itemlogos/DMGLogo.vue'
 import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
-import Characters from '@/components/characters/Characters.scss'
 import { reactive } from 'vue'
+import Characters from '@/components/characters/Characters.scss'
 
 const champ = reactive({
-    name: 'Chuck',
-    hp: 1250,
-    nickname: 'Chuck.'
+    name: 'Sofia',
+    hp: 800,
+    nickname: 'Blaze Bandit'
 })
 
 const abilities = reactive({
     basic: {
-        name: 'Chuck Punch',
+        name: 'Fire Slash',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Punch for a 3-hit combo. Hitting an opponent will grant you a Knock stack.'
+        info: 'Slash for a 3-hit combo.'
     },
     special: {
-        name: 'Chuck Knock',
-        damage: 999,
-        scaling: '(0.6)',
-        info: 'Throw a powerful punch. Inflict stun if you have full Knock stacks.'
+        name: 'Reflect Stance',
+        damage: "N/A",
+        scaling: '(N/A)',
+        info: 'Counters attacks and reflexts projectiles.'
     },
     movement: {
-        name: 'Chuck Jump',
+        name: 'Fiery Dash',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Jump to a location. Apply knock up on land.'
+        info: 'Dash forward, setting your katana on fire. Recast upon hitting an enemy up to 3 times.'
     },
     ultimate: {
-        name: 'CHUCK!!!!',
+        name: 'Flamestrike',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Become gigantic and get an hp, damage and speed buff.'
+        info: 'Hurl a fiery projectile with your katana. Flamestrike is charged by hitting opponents with Fire Slash.'
     }
 })
 

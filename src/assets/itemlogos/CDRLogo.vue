@@ -1,6 +1,6 @@
 <template>
     <span class="material-symbols-rounded">
-        hourglass_empty
+        hourglass_full
     </span>
 </template>
 
@@ -24,6 +24,7 @@ export default {
 .material-symbols-rounded {
     font-size: inherit;
     color: #2dabb7;
+    text-decoration: underline;
     text-shadow: 2px 2px 0px rgba($color: #1d7077, $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3);
 }
 
