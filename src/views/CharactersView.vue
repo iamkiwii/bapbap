@@ -3,26 +3,27 @@
 
         <div class="active-champ-display">
 
-            <CharacterInformation :champ="getActiveChampObject(UserData.CurrentActiveChamp)" />
-
+            <!-- <CharacterInformation :champ="getActiveChampObject(UserData.CurrentActiveChamp)" /> -->
+            <ChuckInfo />
         </div>
 
 
-        <div class="character-selector-wrapper" >
+        <div class="character-selector-wrapper">
             <div class="character-selector" v-for="ActiveChampObject in UserData.ActiveChamps" :key="ActiveChampObject">
                 <div class="temporary"></div>
-                <CharacterDisplay :champ="ActiveChampObject" :key="updateKey" @click="toggleActiveItem(ActiveChampObject)" />
+                <CharacterDisplay :champ="ActiveChampObject" :key="updateKey"
+                    @click="toggleActiveItem(ActiveChampObject)" />
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import GameData from '@/assets/GameData.js'
+import GameData from '@/assets/GameData.js';
 import UserData from '@/assets/UserData.js';
 import { ActiveChampObject } from '@/assets/UserData.js';
 import CharacterDisplay from '@/components/characters/CharacterDisplay.vue';
-import CharacterInformation from '@/components/characters/CharacterInformation.vue';
+import ChuckInfo from '@/components/characters/ChuckInfo.vue';
 </script>
 
 <script>
@@ -36,7 +37,8 @@ export default {
         }
     },
     components: {
-        CharacterDisplay
+        CharacterDisplay,
+        ChuckInfo
     },
     methods: {
         // Toggles active item in UserData.ActiveItems then forces a re-render of the ItemSelector component
@@ -67,8 +69,8 @@ function toggleActive(a) {
 }
 
 function getActiveChampObject(champName) {
-    for( let champ of UserData.ActiveChamps ) {
-        if ( champName === champ.name ) {
+    for (let champ of UserData.ActiveChamps) {
+        if (champName === champ.name) {
             return champ
         }
     }
