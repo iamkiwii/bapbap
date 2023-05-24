@@ -11,7 +11,7 @@
 import { ActiveChampObject } from '@/assets/UserData'
 import Kitsu from '@/assets/champs/images/Kitsu Icon.png'
 import Anna from '@/assets/champs/images/Anna Icon.png'
-import Chuck from '@/assets/champs/images/Chuck Icon.png'
+import Chuck from '@/assets/champs/Chuck/Chuck Icon.png'
 import Froggy from '@/assets/champs/images/Froggy Icon.png'
 import Sashimi from '@/assets/champs/images/Sashimi Icon.png'
 import Skinny from '@/assets/champs/images/Skinny Icon.png'

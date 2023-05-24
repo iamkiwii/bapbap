@@ -115,7 +115,7 @@ function getDivineIMG() {
 
 .info-banner {
     transform: skew(5deg);
-    box-shadow: 5px 5px 0px rgba($color: rgb(250, 151, 34), $alpha: 1), -30px -30px 0px rgba($color: rgb(9, 34, 56), $alpha: 1), 10px 10px 8px rgba($color: #000000, $alpha: 0.3);
+    box-shadow: 5px 5px 0px rgba($color: rgb(250, 151, 34), $alpha: 1), -22px -22px 0px rgba($color: rgb(9, 34, 56), $alpha: 1), 10px 10px 8px rgba($color: #000000, $alpha: 0.3);
     width: 75%;
     height: 45%;
     background-color: rgb(254, 214, 6);

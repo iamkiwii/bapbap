@@ -109,7 +109,7 @@ export default {
 
 .rank-banners:hover {
 
-    transform: scale(1.3) translate3d(0, 0, 0);
+    transform: scale(1.1) translate3d(0, 0, 0);
     z-index: 1;
     backface-visibility: hidden;
     transition: 0.4s ease-in-out;
