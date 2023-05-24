@@ -84,13 +84,13 @@
                 <div class="text"> BEST BUILDS </div>
                 <div class="build">
                     <div class="items">
+                        <HealthLogo />
                         <VampLogo />
-                        <VampLogo />
-                        <DMGLogo />
+                        <CDRLogo />
                     </div>
                     <div class="items">
-                        <VampLogo />
-                        <VampLogo />
+                        <HealthLogo />
+                        <HealthLogo />
                         <VampLogo />
                     </div>
                 </div>
