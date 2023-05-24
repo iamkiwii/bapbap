@@ -84,13 +84,13 @@
                 <div class="text"> BEST BUILDS </div>
                 <div class="build">
                     <div class="items">
-                        <HealthLogo />
+                        <DMGLogo />
+                        <DMGLogo />
                         <ASLogo />
-                        <VampLogo />
                     </div>
                     <div class="items">
-                        <HealthLogo />
-                        <ASLogo />
+                        <DMGLogo />
+                        <DMGLogo />
                         <DMGLogo />
                     </div>
                 </div>
@@ -100,50 +100,50 @@
 </template>
 
 <script setup>
-import Champ from '@/assets/champs/Chuck/Chuck.png'
-import Basic from '@/assets/champs/Chuck/Chuck_Lmb_Sprite.png'
-import Special from '@/assets/champs/Chuck/Chuck_Q_Sprite.png'
-import Movement from '@/assets/champs/Chuck/Chuck_Space_Sprite.png'
-import Ultimate from '@/assets/champs/Chuck/Chuck_E_Sprite.png'
+import Champ from '@/assets/champs/Kitsu/Kitsu.png'
+import Basic from '@/assets/champs/Kitsu/Kitsu_Lmb_Sprite.png'
+import Special from '@/assets/champs/Kitsu/Kitsu_Q_Sprite.png'
+import Movement from '@/assets/champs/Kitsu/Kitsu_Space_Sprite.png'
+import Ultimate from '@/assets/champs/Kitsu/Kitsu_E_Sprite.png'
 import HealthLogo from '@/assets/itemlogos/HealthLogo.vue'
 import ASLogo from '@/assets/itemlogos/ASLogo.vue'
 import VampLogo from '@/assets/itemlogos/VampLogo.vue'
 import DMGLogo from '@/assets/itemlogos/DMGLogo.vue'
 import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
-import Characters from '@/components/characters/Characters.scss'
 import { reactive } from 'vue'
+import Characters from '@/components/characters/Characters.scss'
 
 const champ = reactive({
-    name: 'Chuck',
-    hp: 1250,
-    nickname: 'Chuck.'
+    name: 'Kitsu',
+    hp: 800,
+    nickname: 'Fox Huntress'
 })
 
 const abilities = reactive({
     basic: {
-        name: 'Chuck Punch',
+        name: 'Violet Strike',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Punch for a 3-hit combo. Hitting an opponent will grant you a Knock stack.'
+        info: 'Shoot an energy arrow.'
     },
     special: {
-        name: 'Chuck Knock',
+        name: 'Mooncall',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Throw a powerful punch. Inflict stun if you have full Knock stacks.'
+        info: 'Rain down arrows in an area. Apply slow on hit.'
     },
     movement: {
-        name: 'Chuck Jump',
+        name: 'Foxtrot',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Jump to a location. Apply knock up on land.'
+        info: 'Shoot the ground to jump away. Apply knockup on hit.'
     },
     ultimate: {
-        name: 'CHUCK!!!!',
+        name: 'Shooting Stars',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Become gigantic and get an hp, damage and speed buff.'
+        info: 'Shoot a piercing arrow through obstacles and enemies. Apply root on hit.'
     }
 })
 

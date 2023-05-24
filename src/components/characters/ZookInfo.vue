@@ -84,13 +84,13 @@
                 <div class="text"> BEST BUILDS </div>
                 <div class="build">
                     <div class="items">
-                        <HealthLogo />
+                        <DMGLogo />
+                        <DMGLogo />
                         <ASLogo />
-                        <VampLogo />
                     </div>
                     <div class="items">
-                        <HealthLogo />
-                        <ASLogo />
+                        <DMGLogo />
+                        <DMGLogo />
                         <DMGLogo />
                     </div>
                 </div>
@@ -100,50 +100,50 @@
 </template>
 
 <script setup>
-import Champ from '@/assets/champs/Chuck/Chuck.png'
-import Basic from '@/assets/champs/Chuck/Chuck_Lmb_Sprite.png'
-import Special from '@/assets/champs/Chuck/Chuck_Q_Sprite.png'
-import Movement from '@/assets/champs/Chuck/Chuck_Space_Sprite.png'
-import Ultimate from '@/assets/champs/Chuck/Chuck_E_Sprite.png'
+import Champ from '@/assets/champs/Zook/Zook.png'
+import Basic from '@/assets/champs/Zook/Zook_Lmb_Sprite.png'
+import Special from '@/assets/champs/Zook/Zook_Q_Sprite.png'
+import Movement from '@/assets/champs/Zook/Zook_Space_Sprite.png'
+import Ultimate from '@/assets/champs/Zook/Zook_E_Sprite.png'
 import HealthLogo from '@/assets/itemlogos/HealthLogo.vue'
 import ASLogo from '@/assets/itemlogos/ASLogo.vue'
 import VampLogo from '@/assets/itemlogos/VampLogo.vue'
 import DMGLogo from '@/assets/itemlogos/DMGLogo.vue'
 import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
-import Characters from '@/components/characters/Characters.scss'
 import { reactive } from 'vue'
+import Characters from '@/components/characters/Characters.scss'
 
 const champ = reactive({
-    name: 'Chuck',
-    hp: 1250,
-    nickname: 'Chuck.'
+    name: 'Zook',
+    hp: 800,
+    nickname: 'Stylish Arms Dealer'
 })
 
 const abilities = reactive({
     basic: {
-        name: 'Chuck Punch',
+        name: 'Bazooka',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Punch for a 3-hit combo. Hitting an opponent will grant you a Knock stack.'
+        info: 'Fire a rocket that explodes on hit.'
     },
     special: {
-        name: 'Chuck Knock',
+        name: 'Locked On',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Throw a powerful punch. Inflict stun if you have full Knock stacks.'
+        info: 'Fire a homing missile that tracks targets.'
     },
     movement: {
-        name: 'Chuck Jump',
+        name: 'Gotta Blast',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Jump to a location. Apply knock up on land.'
+        info: 'Blast the ground to launch yourself to a location. Apply knock up on hit.'
     },
     ultimate: {
-        name: 'CHUCK!!!!',
+        name: 'Mine your step',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Become gigantic and get an hp, damage and speed buff.'
+        info: 'Throw proximimty mines on the ground. Apply slow on hit.'
     }
 })
 

@@ -85,12 +85,12 @@
                 <div class="build">
                     <div class="items">
                         <HealthLogo />
-                        <ASLogo />
                         <VampLogo />
+                        <ASLogo />
                     </div>
                     <div class="items">
                         <HealthLogo />
-                        <ASLogo />
+                        <VampLogo />
                         <DMGLogo />
                     </div>
                 </div>
@@ -100,50 +100,50 @@
 </template>
 
 <script setup>
-import Champ from '@/assets/champs/Chuck/Chuck.png'
-import Basic from '@/assets/champs/Chuck/Chuck_Lmb_Sprite.png'
-import Special from '@/assets/champs/Chuck/Chuck_Q_Sprite.png'
-import Movement from '@/assets/champs/Chuck/Chuck_Space_Sprite.png'
-import Ultimate from '@/assets/champs/Chuck/Chuck_E_Sprite.png'
+import Champ from '@/assets/champs/Froggy/Froggy.png'
+import Basic from '@/assets/champs/Froggy/Froggy_Lmb_Sprite.png'
+import Special from '@/assets/champs/Froggy/Froggy_Q_Sprite.png'
+import Movement from '@/assets/champs/Froggy/Froggy_Space_Sprite.png'
+import Ultimate from '@/assets/champs/Froggy/Froggy_E_Sprite.png'
 import HealthLogo from '@/assets/itemlogos/HealthLogo.vue'
 import ASLogo from '@/assets/itemlogos/ASLogo.vue'
 import VampLogo from '@/assets/itemlogos/VampLogo.vue'
 import DMGLogo from '@/assets/itemlogos/DMGLogo.vue'
 import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
-import Characters from '@/components/characters/Characters.scss'
 import { reactive } from 'vue'
+import Characters from '@/components/characters/Characters.scss'
 
 const champ = reactive({
-    name: 'Chuck',
-    hp: 1250,
-    nickname: 'Chuck.'
+    name: 'Froggy',
+    hp: 800,
+    nickname: 'Swamp Master'
 })
 
 const abilities = reactive({
     basic: {
-        name: 'Chuck Punch',
+        name: 'Ribbhit',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Punch for a 3-hit combo. Hitting an opponent will grant you a Knock stack.'
+        info: 'Slash for a 3-hit combo.'
     },
     special: {
-        name: 'Chuck Knock',
-        damage: 999,
-        scaling: '(0.6)',
-        info: 'Throw a powerful punch. Inflict stun if you have full Knock stacks.'
+        name: 'MLEM',
+        damage: "N/A",
+        scaling: '(N/A)',
+        info: 'Stick to a target with your tongue. Apply slow on hit.'
     },
     movement: {
-        name: 'Chuck Jump',
+        name: 'Hip Hop',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Jump to a location. Apply knock up on land.'
+        info: 'Leap to a location, inflict slow when landing.'
     },
     ultimate: {
-        name: 'CHUCK!!!!',
+        name: 'Slice N\' Dice',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Become gigantic and get an hp, damage and speed buff.'
+        info: 'Dash forward and deal high damage to opponents along the way.'
     }
 })
 

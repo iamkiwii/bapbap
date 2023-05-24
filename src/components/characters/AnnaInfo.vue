@@ -84,13 +84,13 @@
                 <div class="text"> BEST BUILDS </div>
                 <div class="build">
                     <div class="items">
-                        <HealthLogo />
-                        <ASLogo />
+                        <DMGLogo />
+                        <DMGLogo />
                         <VampLogo />
                     </div>
                     <div class="items">
-                        <HealthLogo />
-                        <ASLogo />
+                        <DMGLogo />
+                        <DMGLogo />
                         <DMGLogo />
                     </div>
                 </div>
@@ -100,50 +100,50 @@
 </template>
 
 <script setup>
-import Champ from '@/assets/champs/Chuck/Chuck.png'
-import Basic from '@/assets/champs/Chuck/Chuck_Lmb_Sprite.png'
-import Special from '@/assets/champs/Chuck/Chuck_Q_Sprite.png'
-import Movement from '@/assets/champs/Chuck/Chuck_Space_Sprite.png'
-import Ultimate from '@/assets/champs/Chuck/Chuck_E_Sprite.png'
+import Champ from '@/assets/champs/Anna/Anna.png'
+import Basic from '@/assets/champs/Anna/Anna_Lmb_Sprite.png'
+import Special from '@/assets/champs/Anna/Anna_Q_Sprite.png'
+import Movement from '@/assets/champs/Anna/Anna_Space_Sprite.png'
+import Ultimate from '@/assets/champs/Anna/Anna_E_Sprite.png'
 import HealthLogo from '@/assets/itemlogos/HealthLogo.vue'
 import ASLogo from '@/assets/itemlogos/ASLogo.vue'
 import VampLogo from '@/assets/itemlogos/VampLogo.vue'
 import DMGLogo from '@/assets/itemlogos/DMGLogo.vue'
 import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
-import Characters from '@/components/characters/Characters.scss'
 import { reactive } from 'vue'
+import Characters from '@/components/characters/Characters.scss'
 
 const champ = reactive({
-    name: 'Chuck',
-    hp: 1250,
-    nickname: 'Chuck.'
+    name: 'Anna',
+    hp: 800,
+    nickname: 'Speed Graffittier'
 })
 
 const abilities = reactive({
     basic: {
-        name: 'Chuck Punch',
+        name: 'Run N\' Gun',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Punch for a 3-hit combo. Hitting an opponent will grant you a Knock stack.'
+        info: 'Fire 4 small bullets.'
     },
     special: {
-        name: 'Chuck Knock',
+        name: 'Eat Lead',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Throw a powerful punch. Inflict stun if you have full Knock stacks.'
+        info: 'Fire 3 big bullets at once. Reset CYA! on hit.'
     },
     movement: {
-        name: 'Chuck Jump',
+        name: 'CYA!',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Jump to a location. Apply knock up on land.'
+        info: 'Perform a quick dash.'
     },
     ultimate: {
-        name: 'CHUCK!!!!',
+        name: 'Bullet Hell',
         damage: 999,
         scaling: '(0.6)',
-        info: 'Become gigantic and get an hp, damage and speed buff.'
+        info: 'Spin and shoot everything around you. Apply slow on hit.'
     }
 })
 

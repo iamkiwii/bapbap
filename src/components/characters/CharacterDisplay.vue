@@ -9,16 +9,16 @@
 
 <script setup>
 import { ActiveChampObject } from '@/assets/UserData'
-import Kitsu from '@/assets/champs/images/Kitsu Icon.png'
-import Anna from '@/assets/champs/images/Anna Icon.png'
+import Kitsu from '@/assets/champs/Kitsu/Kitsu Icon.png'
+import Anna from '@/assets/champs/Anna/Anna Icon.png'
 import Chuck from '@/assets/champs/Chuck/Chuck Icon.png'
-import Froggy from '@/assets/champs/images/Froggy Icon.png'
-import Sashimi from '@/assets/champs/images/Sashimi Icon.png'
-import Skinny from '@/assets/champs/images/Skinny Icon.png'
-import Sofia from '@/assets/champs/images/Sofia Icon.png'
-import Teevee from '@/assets/champs/images/Teevee Icon.png'
-import Zook from '@/assets/champs/images/Zook Icon.png'
-import Kiddo from '@/assets/champs/images/Kiddo Icon.png'
+import Froggy from '@/assets/champs/Froggy/Froggy Icon.png'
+import Sashimi from '@/assets/champs/Sashimi/Sashimi Icon.png'
+import Skinny from '@/assets/champs/Skinny/Skinny Icon.png'
+import Sofia from '@/assets/champs/Sofia/Sofia Icon.png'
+import Teevee from '@/assets/champs/Teevee/Teevee Icon.png'
+import Zook from '@/assets/champs/Zook/Zook Icon.png'
+import Kiddo from '@/assets/champs/Kiddo/Kiddo Icon.png'
 </script>
 
 <script>
