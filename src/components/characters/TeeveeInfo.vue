@@ -112,11 +112,11 @@ import DMGLogo from '@/assets/itemlogos/DMGLogo.vue'
 import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
 import { reactive } from 'vue'
-import Characters from '@/components/characters/Characters.scss'
+import '@/components/characters/Characters.scss'
 
 const champ = reactive({
     name: 'Teevee',
-    hp: 800,
+    hp: 750,
     nickname: 'D34D_B33F.exe'
 })
 
@@ -124,25 +124,25 @@ const abilities = reactive({
     basic: {
         name: 'Hello World',
         damage: 999,
-        scaling: '(0.6)',
+        scaling: '',
         info: 'Shoot out a digital wave.'
     },
     special: {
         name: 'Raycast',
         damage: 999,
-        scaling: '(0.6)',
+        scaling: '',
         info: 'Shoot out a beam. Apply slow on hit.'
     },
     movement: {
         name: 'Ctrl+C & Ctrl+V',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: "N/A",
+        scaling: '',
         info: 'Teleport to a location and create a clone at your original position. Recast to swap positions with your clone.'
     },
     ultimate: {
         name: 'memcpy',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: "N/A",
+        scaling: '',
         info: 'Create a clone at a location. Recast to swap positions with your clone.'
     }
 })

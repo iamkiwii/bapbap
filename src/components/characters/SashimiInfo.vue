@@ -112,11 +112,11 @@ import DMGLogo from '@/assets/itemlogos/DMGLogo.vue'
 import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
 import { reactive } from 'vue'
-import Characters from '@/components/characters/Characters.scss'
+import '@/components/characters/Characters.scss'
 
 const champ = reactive({
     name: 'Sashimi',
-    hp: 800,
+    hp: 1350,
     nickname: 'Upgraded Fishtank'
 })
 

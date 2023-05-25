@@ -116,7 +116,7 @@ import '@/components/characters/Characters.scss'
 
 const champ = reactive({
     name: 'Kiddo',
-    hp: 800,
+    hp: 750,
     nickname: 'Pyro Prodigy'
 })
 

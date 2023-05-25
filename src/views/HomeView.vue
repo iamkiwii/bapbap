@@ -35,6 +35,10 @@
         </div>
       </RouterLink>
     </div>
+    <div class="divider"></div>
+    <div class="recent-patch">
+      <div class="title">RECENT PATCH</div>
+    </div>
   </div>
 </template>
 
@@ -45,18 +49,20 @@
 <style lang="scss" scoped>
 .home-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  height: 100%;
 
   .buttons-wrapper {
     margin-top: 5vh;
+    width: 35%;
 
     .button {
       transition: 0.2s ease-in-out;
       display: flex;
       transform: skew(-5deg);
       margin-top: 5vh;
-      width: 20vw;
-      height: 15vh;
+      width: 100%;
+      height: 25%;
       background-color: #091335;
       cursor: pointer;
       box-shadow: 6px 6px 0px rgba($color: #fed606, $alpha: 1), 12px 12px 20px rgba($color: #000000, $alpha: 0.3);
@@ -81,7 +87,7 @@
 
         .material-symbols-rounded {
           margin-left: 1vw;
-          font-size: 4vw;
+          font-size: 5rem;
           color: white;
           margin-bottom: -1vh;
         }
@@ -96,7 +102,7 @@
         .material-symbols-rounded {
           transition: 0.2s ease-in-out;
           color: white;
-          font-size: 4vw;
+          font-size: 5rem;
           margin-top: auto;
         }
 
@@ -115,6 +121,27 @@
         }
       }
     }
+  }
+
+  .divider {
+    width: 10%;
+  }
+
+  .recent-patch {
+    transform: skew(-5deg);
+    margin-top: 10vh;
+    width: 35%;
+    background-color: #091335;
+    cursor: pointer;
+    box-shadow: 6px 6px 0px rgba($color: #fed606, $alpha: 1), 12px 12px 20px rgba($color: #000000, $alpha: 0.3);
+
+    .title {
+      margin-top: 4%;
+      text-align: center;
+      color: white;
+      font-size: 2.5rem;
+    }
+
   }
 
 
