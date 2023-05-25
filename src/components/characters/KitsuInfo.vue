@@ -123,8 +123,8 @@ const champ = reactive({
 const abilities = reactive({
     basic: {
         name: 'Violet Strike',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 200,
+        scaling: '(0.8)',
         info: 'Shoot an energy arrow.'
     },
     special: {

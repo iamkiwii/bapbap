@@ -116,7 +116,7 @@ import Characters from '@/components/characters/Characters.scss'
 
 const champ = reactive({
     name: 'Froggy',
-    hp: 800,
+    hp: 725,
     nickname: 'Swamp Master'
 })
 

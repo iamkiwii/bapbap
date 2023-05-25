@@ -116,21 +116,21 @@ import Characters from '@/components/characters/Characters.scss'
 
 const champ = reactive({
     name: 'Skinny',
-    hp: 800,
+    hp: 850,
     nickname: 'Shadow Walker'
 })
 
 const abilities = reactive({
     basic: {
         name: 'Reap',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 160,
+        scaling: '(0.4)',
         info: 'Slash for a 2-hit combo.'
     },
     special: {
         name: 'Claw',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 220,
+        scaling: '(0.75)',
         info: 'Slice the ground. Apply Exposed on hit.'
     },
     movement: {
@@ -141,8 +141,8 @@ const abilities = reactive({
     },
     ultimate: {
         name: 'RIP',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 360,
+        scaling: '(0.9)',
         info: 'Dash forward and slash in front of you.'
     }
 })
