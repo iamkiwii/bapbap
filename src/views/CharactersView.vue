@@ -42,6 +42,9 @@ import SkinnyInfo from '@/components/characters/SkinnyInfo.vue';
 import FroggyInfo from '@/components/characters/FroggyInfo.vue';
 import TeeveeInfo from '@/components/characters/TeeveeInfo.vue';
 import SofiaInfo from '@/components/characters/SofiaInfo.vue';
+
+
+
 </script>
 
 <script>
@@ -77,6 +80,9 @@ export default {
         forceRender() {
             this.updateKey++;
         }
+    },
+    mount() {
+
     }
 }
 

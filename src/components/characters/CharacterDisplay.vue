@@ -25,7 +25,12 @@ import Kiddo from '@/assets/champs/Kiddo/Kiddo Icon.png'
 
 export default {
     props: {
-        champ: ActiveChampObject,
+        champ: ActiveChampObject
+    },
+    data() {
+        return {
+            isActive: this.checkIfActive()
+        }
     },
     methods: {
         getImage() {
