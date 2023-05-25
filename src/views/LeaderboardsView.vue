@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import LeaderBoard from '@/components/leaderboard/leaderboard.vue'
+import LeaderBoard from '@/components/leaderboard/LeaderBoard.vue'
 </script>
 
 <style lang="scss" scoped></style>
