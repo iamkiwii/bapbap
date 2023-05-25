@@ -112,7 +112,7 @@ import DMGLogo from '@/assets/itemlogos/DMGLogo.vue'
 import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
 import { reactive } from 'vue'
-import Characters from '@/components/characters/Characters.scss'
+import '@/components/characters/Characters.scss'
 
 const champ = reactive({
     name: 'Anna',
@@ -123,26 +123,26 @@ const champ = reactive({
 const abilities = reactive({
     basic: {
         name: 'Run N\' Gun',
-        damage: 999,
-        scaling: '(0.6)',
-        info: 'Fire 4 small bullets.'
+        damage: 55,
+        scaling: '/bullet',
+        info: 'Fire 4 small bullets.' // 55 85 100
     },
     special: {
         name: 'Eat Lead',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 85,
+        scaling: '',
         info: 'Fire 3 big bullets at once. Reset CYA! on hit.'
     },
     movement: {
         name: 'CYA!',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: "N/A",
+        scaling: '',
         info: 'Perform a quick dash.'
     },
     ultimate: {
         name: 'Bullet Hell',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 100,
+        scaling: '',
         info: 'Spin and shoot everything around you. Apply slow on hit.'
     }
 })

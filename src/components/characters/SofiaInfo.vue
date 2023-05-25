@@ -112,7 +112,7 @@ import DMGLogo from '@/assets/itemlogos/DMGLogo.vue'
 import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
 import { reactive } from 'vue'
-import Characters from '@/components/characters/Characters.scss'
+import '@/components/characters/Characters.scss'
 
 const champ = reactive({
     name: 'Sofia',
@@ -123,26 +123,26 @@ const champ = reactive({
 const abilities = reactive({
     basic: {
         name: 'Fire Slash',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 100,
+        scaling: '(120)',
         info: 'Slash for a 3-hit combo.'
     },
     special: {
         name: 'Reflect Stance',
         damage: "N/A",
-        scaling: '(N/A)',
+        scaling: '',
         info: 'Counters attacks and reflexts projectiles.'
     },
     movement: {
         name: 'Fiery Dash',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 80,
+        scaling: '',
         info: 'Dash forward, setting your katana on fire. Recast upon hitting an enemy up to 3 times.'
     },
     ultimate: {
         name: 'Flamestrike',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 220,
+        scaling: '',
         info: 'Hurl a fiery projectile with your katana. Flamestrike is charged by hitting opponents with Fire Slash.'
     }
 })

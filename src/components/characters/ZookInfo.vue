@@ -112,7 +112,7 @@ import DMGLogo from '@/assets/itemlogos/DMGLogo.vue'
 import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
 import { reactive } from 'vue'
-import Characters from '@/components/characters/Characters.scss'
+import '@/components/characters/Characters.scss'
 
 const champ = reactive({
     name: 'Zook',
@@ -123,26 +123,26 @@ const champ = reactive({
 const abilities = reactive({
     basic: {
         name: 'Bazooka',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 175,
+        scaling: '(185)',
         info: 'Fire a rocket that explodes on hit.'
     },
     special: {
         name: 'Locked On',
         damage: 999,
-        scaling: '(0.6)',
+        scaling: '',
         info: 'Fire a homing missile that tracks targets.'
     },
     movement: {
         name: 'Gotta Blast',
         damage: 999,
-        scaling: '(0.6)',
+        scaling: '',
         info: 'Blast the ground to launch yourself to a location. Apply knock up on hit.'
     },
     ultimate: {
         name: 'Mine your step',
         damage: 999,
-        scaling: '(0.6)',
+        scaling: '',
         info: 'Throw proximimty mines on the ground. Apply slow on hit.'
     }
 })

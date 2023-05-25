@@ -111,7 +111,7 @@ import VampLogo from '@/assets/itemlogos/VampLogo.vue'
 import DMGLogo from '@/assets/itemlogos/DMGLogo.vue'
 import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
-import Characters from '@/components/characters/Characters.scss'
+import '@/components/characters/Characters.scss'
 import { reactive } from 'vue'
 
 const champ = reactive({
@@ -123,26 +123,26 @@ const champ = reactive({
 const abilities = reactive({
     basic: {
         name: 'Chuck Punch',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 175,
+        scaling: '(0)',
         info: 'Punch for a 3-hit combo. Hitting an opponent will grant you a Knock stack.'
     },
     special: {
         name: 'Chuck Knock',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 310,
+        scaling: '',
         info: 'Throw a powerful punch. Inflict stun if you have full Knock stacks.'
     },
     movement: {
         name: 'Chuck Jump',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 200,
+        scaling: '',
         info: 'Jump to a location. Apply knock up on land.'
     },
     ultimate: {
         name: 'CHUCK!!!!',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: null,
+        scaling: '(+20%)',
         info: 'Become gigantic and get an hp, damage and speed buff.'
     }
 })

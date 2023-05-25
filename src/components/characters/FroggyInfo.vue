@@ -112,7 +112,7 @@ import DMGLogo from '@/assets/itemlogos/DMGLogo.vue'
 import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
 import { reactive } from 'vue'
-import Characters from '@/components/characters/Characters.scss'
+import '@/components/characters/Characters.scss'
 
 const champ = reactive({
     name: 'Froggy',
@@ -123,26 +123,26 @@ const champ = reactive({
 const abilities = reactive({
     basic: {
         name: 'Ribbhit',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 125,
+        scaling: '(150)',
         info: 'Slash for a 3-hit combo.'
     },
     special: {
         name: 'MLEM',
         damage: "N/A",
-        scaling: '(N/A)',
+        scaling: '',
         info: 'Stick to a target with your tongue. Apply slow on hit.'
     },
     movement: {
         name: 'Hip Hop',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 210,
+        scaling: '',
         info: 'Leap to a location, inflict slow when landing.'
     },
     ultimate: {
         name: 'Slice N\' Dice',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 330,
+        scaling: '',
         info: 'Dash forward and deal high damage to opponents along the way.'
     }
 })

@@ -67,6 +67,8 @@
 
         .image {
             object-fit: contain;
+            filter: drop-shadow(12px 12px 20px rgba($color: #000000, $alpha: 0.5));
+            -webkit-filter: drop-shadow(12px 12px 20px rgba($color: #000000, $alpha: 0.5));
         }
     }
 

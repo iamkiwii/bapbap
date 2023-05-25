@@ -112,7 +112,7 @@ import DMGLogo from '@/assets/itemlogos/DMGLogo.vue'
 import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
 import { reactive } from 'vue'
-import Characters from '@/components/characters/Characters.scss'
+import '@/components/characters/Characters.scss'
 
 const champ = reactive({
     name: 'Kiddo',
@@ -123,26 +123,26 @@ const champ = reactive({
 const abilities = reactive({
     basic: {
         name: 'Light it up',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 170,
+        scaling: '',
         info: 'Light up an area.'
     },
     special: {
         name: 'It\'s Lit',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 60,
+        scaling: '/.5s',
         info: 'Turn an area into an expanding fire. Apply burn and slow on hit.'
     },
     movement: {
         name: 'Flame on',
         damage: "N/A",
-        scaling: '(N/A)',
+        scaling: '',
         info: 'Activate a fire shield.'
     },
     ultimate: {
         name: 'Blaze it',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 515,
+        scaling: '',
         info: 'Send a huge meteorite crashing into the ground.'
     }
 })
