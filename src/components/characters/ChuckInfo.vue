@@ -126,7 +126,7 @@ import AbilityCDLogo from '@/assets/itemlogos/AbilityCDLogo.vue'
 
 const champ = reactive({
     name: 'Chuck',
-    hp: 1250,
+    hp: 1300,
     nickname: 'Chuck.'
 })
 
