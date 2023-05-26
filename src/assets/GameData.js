@@ -86,7 +86,7 @@ var Diamond = {
 var Royal = {
     rank: "Royal",
     tiers: ["I", "II", "III"],
-    fee: 17,
+    fee: 20,
     threshold: 1600
 }
 
