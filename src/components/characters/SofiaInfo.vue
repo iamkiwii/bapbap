@@ -131,7 +131,7 @@ const abilities = reactive({
     basic: {
         name: 'Fire Slash',
         damage: 100,
-        scaling: '(120)',
+        scaling: '(135)',
         info: 'Slash for a 3-hit combo.'
     },
     special: {
