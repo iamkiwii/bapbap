@@ -8,7 +8,7 @@
     box-shadow: 8px 8px 0px rgba($color: #fed606, $alpha: 1), 12px 12px 20px rgba($color: #000000, $alpha: 0.3);
 
     .left {
-        width: 35%;
+        width: 32%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -73,11 +73,11 @@
     }
 
     .seperator {
-        width: 3%;
+        width: 1%;
     }
 
     .middle {
-        width: 36.6%;
+        width: 45%;
         justify-self: flex-end;
         margin-right: 0;
 
@@ -117,7 +117,7 @@
                             font-size: 2rem;
                             text-decoration: underline;
                             text-underline-offset: 30%;
-                            width: 80%;
+                            width: 60%;
                         }
 
                         .ability-damage {
@@ -141,6 +141,12 @@
                                 font-size: 1.5rem;
                                 margin-right: 2%;
                             }
+
+                            .cooldown {
+                                margin-left: 5%;
+                                color: white;
+                                display: flex;
+                            }
                         }
                     }
 
@@ -155,7 +161,7 @@
     }
 
     .right {
-        width: 25%;
+        width: 20%;
 
         .builds {
             margin-top: 10%;

@@ -42,6 +42,9 @@
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.special.damage }} <div class="scaling">
                                     {{ abilities.special.scaling }}</div>
+                                <div class="cooldown">
+                                    <AbilityCDLogo /> {{ abilities.special.cooldown }}
+                                </div>
                             </div>
                         </div>
                         <div class="ability-info">{{ abilities.special.info }}</div>
@@ -57,6 +60,9 @@
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.movement.damage }} <div class="scaling">
                                     {{ abilities.movement.scaling }}</div>
+                                <div class="cooldown">
+                                    <AbilityCDLogo /> {{ abilities.movement.cooldown }}
+                                </div>
                             </div>
                         </div>
                         <div class="ability-info">{{ abilities.movement.info }}</div>
@@ -113,10 +119,11 @@ import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
 import { reactive } from 'vue'
 import '@/components/characters/Characters.scss'
+import AbilityCDLogo from '@/assets/itemlogos/AbilityCDLogo.vue'
 
 const champ = reactive({
     name: 'Sofia',
-    hp: 800,
+    hp: 750,
     nickname: 'Blaze Bandit'
 })
 
@@ -124,19 +131,21 @@ const abilities = reactive({
     basic: {
         name: 'Fire Slash',
         damage: 100,
-        scaling: '(120)',
+        scaling: '(135)',
         info: 'Slash for a 3-hit combo.'
     },
     special: {
         name: 'Reflect Stance',
         damage: "N/A",
         scaling: '',
+        cooldown: '10s',
         info: 'Counters attacks and reflexts projectiles.'
     },
     movement: {
         name: 'Fiery Dash',
         damage: 80,
         scaling: '',
+        cooldown: '6s',
         info: 'Dash forward, setting your katana on fire. Recast upon hitting an enemy up to 3 times.'
     },
     ultimate: {

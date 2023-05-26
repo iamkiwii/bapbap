@@ -10,7 +10,7 @@
                 <div class="nickname">{{ champ.nickname }}</div>
             </div>
             <div class="image-wrapper">
-                <img :src="Champ" class="image" id="fuck-you2" draggable="false" />
+                <img :src="Champ" class="image" draggable="false" />
             </div>
         </div>
         <div class="seperator"></div>
@@ -38,10 +38,13 @@
                     </div>
                     <div class="text-wrapper">
                         <div class="ability-name-wrapper">
-                            <div class="ability-name" id="fuck-you">{{ abilities.special.name }}</div>
+                            <div class="ability-name">{{ abilities.special.name }}</div>
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.special.damage }} <div class="scaling">
                                     {{ abilities.special.scaling }}</div>
+                                <div class="cooldown">
+                                    <AbilityCDLogo /> {{ abilities.special.cooldown }}
+                                </div>
                             </div>
                         </div>
                         <div class="ability-info">{{ abilities.special.info }}</div>
@@ -57,6 +60,9 @@
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.movement.damage }} <div class="scaling">
                                     {{ abilities.movement.scaling }}</div>
+                                <div class="cooldown">
+                                    <AbilityCDLogo /> {{ abilities.movement.cooldown }}
+                                </div>
                             </div>
                         </div>
                         <div class="ability-info">{{ abilities.movement.info }}</div>
@@ -72,6 +78,9 @@
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.ultimate.damage }} <div class="scaling">
                                     {{ abilities.ultimate.scaling }}</div>
+                                <div class="cooldown">
+                                    <AbilityCDLogo /> {{ abilities.ultimate.cooldown }}
+                                </div>
                             </div>
                         </div>
                         <div class="ability-info">{{ abilities.ultimate.info }}</div>
@@ -90,7 +99,7 @@
                     </div>
                     <div class="items">
                         <ASLogo />
-                        <VampLogo />
+                        <ASLogo />
                         <HealthLogo />
                     </div>
                 </div>
@@ -113,6 +122,7 @@ import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
 import { reactive } from 'vue'
 import '@/components/characters/Characters.scss'
+import AbilityCDLogo from '@/assets/itemlogos/AbilityCDLogo.vue'
 
 const champ = reactive({
     name: 'Sashimi',
@@ -123,26 +133,29 @@ const champ = reactive({
 const abilities = reactive({
     basic: {
         name: 'Chop Chop',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 160,
+        scaling: '(190)',
         info: 'Punch for a 3-hit combo.'
     },
     special: {
         name: 'Ginger Aftertaste',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 220,
+        scaling: '',
+        cooldown: '8s',
         info: 'Clap enemies in front of you. Apply stun and weaken on hit.'
     },
     movement: {
         name: 'Sushi Roll',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 300,
+        scaling: '',
+        cooldown: '14s',
         info: 'Charge a dash, deal damage and slow targets along the way.'
     },
     ultimate: {
         name: 'Tempura Shock',
-        damage: 999,
-        scaling: '(0.6)',
+        damage: 515,
+        scaling: '',
+        cooldown: '24s',
         info: 'Jump and slam into an area. On hit, knock up enemies and shield yourself and allies.'
     }
 })

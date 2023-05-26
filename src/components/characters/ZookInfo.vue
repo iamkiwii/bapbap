@@ -42,6 +42,9 @@
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.special.damage }} <div class="scaling">
                                     {{ abilities.special.scaling }}</div>
+                                <div class="cooldown">
+                                    <AbilityCDLogo /> {{ abilities.special.cooldown }}
+                                </div>
                             </div>
                         </div>
                         <div class="ability-info">{{ abilities.special.info }}</div>
@@ -57,6 +60,9 @@
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.movement.damage }} <div class="scaling">
                                     {{ abilities.movement.scaling }}</div>
+                                <div class="cooldown">
+                                    <AbilityCDLogo /> {{ abilities.movement.cooldown }}
+                                </div>
                             </div>
                         </div>
                         <div class="ability-info">{{ abilities.movement.info }}</div>
@@ -72,6 +78,9 @@
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.ultimate.damage }} <div class="scaling">
                                     {{ abilities.ultimate.scaling }}</div>
+                                <div class="cooldown">
+                                    <AbilityCDLogo /> {{ abilities.ultimate.cooldown }}
+                                </div>
                             </div>
                         </div>
                         <div class="ability-info">{{ abilities.ultimate.info }}</div>
@@ -113,6 +122,7 @@ import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
 import { reactive } from 'vue'
 import '@/components/characters/Characters.scss'
+import AbilityCDLogo from '@/assets/itemlogos/AbilityCDLogo.vue'
 
 const champ = reactive({
     name: 'Zook',
@@ -123,26 +133,29 @@ const champ = reactive({
 const abilities = reactive({
     basic: {
         name: 'Bazooka',
-        damage: 175,
-        scaling: '(185)',
+        damage: 140,
+        scaling: '(190)',
         info: 'Fire a rocket that explodes on hit.'
     },
     special: {
         name: 'Locked On',
-        damage: 999,
+        damage: 170,
         scaling: '',
+        cooldown: '10s',
         info: 'Fire a homing missile that tracks targets.'
     },
     movement: {
         name: 'Gotta Blast',
-        damage: 999,
+        damage: 130,
         scaling: '',
+        cooldown: '16s',
         info: 'Blast the ground to launch yourself to a location. Apply knock up on hit.'
     },
     ultimate: {
         name: 'Mine your step',
-        damage: 999,
+        damage: 150,
         scaling: '',
+        cooldown: '19s',
         info: 'Throw proximimty mines on the ground. Apply slow on hit.'
     }
 })
