@@ -42,6 +42,9 @@
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.special.damage }} <div class="scaling">
                                     {{ abilities.special.scaling }}</div>
+                                <div class="cooldown">
+                                    <AbilityCDLogo /> {{ abilities.special.cooldown }}
+                                </div>
                             </div>
                         </div>
                         <div class="ability-info">{{ abilities.special.info }}</div>
@@ -57,6 +60,9 @@
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.movement.damage }} <div class="scaling">
                                     {{ abilities.movement.scaling }}</div>
+                                <div class="cooldown">
+                                    <AbilityCDLogo /> {{ abilities.movement.cooldown }}
+                                </div>
                             </div>
                         </div>
                         <div class="ability-info">{{ abilities.movement.info }}</div>
@@ -72,6 +78,9 @@
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.ultimate.damage }} <div class="scaling">
                                     {{ abilities.ultimate.scaling }}</div>
+                                <div class="cooldown">
+                                    <AbilityCDLogo /> {{ abilities.ultimate.cooldown }}
+                                </div>
                             </div>
                         </div>
                         <div class="ability-info">{{ abilities.ultimate.info }}</div>
@@ -113,6 +122,7 @@ import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
 import { reactive } from 'vue'
 import '@/components/characters/Characters.scss'
+import AbilityCDLogo from '@/assets/itemlogos/AbilityCDLogo.vue'
 
 const champ = reactive({
     name: 'Skinny',
@@ -124,25 +134,28 @@ const abilities = reactive({
     basic: {
         name: 'Reap',
         damage: 160,
-        scaling: '(0.4)',
+        scaling: '',
         info: 'Slash for a 2-hit combo.'
     },
     special: {
         name: 'Claw',
         damage: 220,
-        scaling: '(0.75)',
+        scaling: '',
+        cooldown: '6s',
         info: 'Slice the ground. Apply Exposed on hit.'
     },
     movement: {
         name: 'Shadow Walk',
         damage: "N/A",
-        scaling: '(N/A)',
+        scaling: '',
+        cooldown: '13s',
         info: 'Become invisible and gain speed.'
     },
     ultimate: {
         name: 'RIP',
         damage: 360,
-        scaling: '(0.9)',
+        scaling: '',
+        cooldown: '18s',
         info: 'Dash forward and slash in front of you.'
     }
 })

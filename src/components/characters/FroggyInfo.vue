@@ -42,6 +42,9 @@
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.special.damage }} <div class="scaling">
                                     {{ abilities.special.scaling }}</div>
+                                <div class="cooldown">
+                                    <AbilityCDLogo /> {{ abilities.special.cooldown }}
+                                </div>
                             </div>
                         </div>
                         <div class="ability-info">{{ abilities.special.info }}</div>
@@ -57,6 +60,9 @@
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.movement.damage }} <div class="scaling">
                                     {{ abilities.movement.scaling }}</div>
+                                <div class="cooldown">
+                                    <AbilityCDLogo /> {{ abilities.movement.cooldown }}
+                                </div>
                             </div>
                         </div>
                         <div class="ability-info">{{ abilities.movement.info }}</div>
@@ -72,6 +78,9 @@
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.ultimate.damage }} <div class="scaling">
                                     {{ abilities.ultimate.scaling }}</div>
+                                <div class="cooldown">
+                                    <AbilityCDLogo /> {{ abilities.ultimate.cooldown }}
+                                </div>
                             </div>
                         </div>
                         <div class="ability-info">{{ abilities.ultimate.info }}</div>
@@ -113,6 +122,7 @@ import CDRLogo from '@/assets/itemlogos/CDRLogo.vue'
 import AbilityDMGLogo from '@/assets/itemlogos/AbilityDMGLogo.vue'
 import { reactive } from 'vue'
 import '@/components/characters/Characters.scss'
+import AbilityCDLogo from '@/assets/itemlogos/AbilityCDLogo.vue'
 
 const champ = reactive({
     name: 'Froggy',
@@ -131,18 +141,21 @@ const abilities = reactive({
         name: 'MLEM',
         damage: "N/A",
         scaling: '',
+        cooldown: '8s',
         info: 'Stick to a target with your tongue. Apply slow on hit.'
     },
     movement: {
         name: 'Hip Hop',
         damage: 210,
         scaling: '',
+        cooldown: '13.5s',
         info: 'Leap to a location, inflict slow when landing.'
     },
     ultimate: {
         name: 'Slice N\' Dice',
         damage: 330,
         scaling: '',
+        cooldown: '19s',
         info: 'Dash forward and deal high damage to opponents along the way.'
     }
 })
