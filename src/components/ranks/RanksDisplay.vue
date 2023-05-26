@@ -71,13 +71,21 @@ export default {
             return this.rank.rank + " " + tier
         },
         getFee(tier) { // Calculates fee bc making a seperate object for each rank is dumb
-            let n = 0;
-            let i = this.rank.fee;
-            if (tier == "II") n = 1;
-            if (tier == "III") n = 2;
-
-            let fee = i + n;
-            return fee;
+            if (this.rank.rank != "Royal") {
+                let n = 0;
+                let i = this.rank.fee;
+                if (tier == "II") n = 1;
+                if (tier == "III") n = 2;
+                let fee = i + n;
+                return fee;
+            } else {
+                let n = 0;
+                let i = this.rank.fee;
+                if (tier == "II") n = 2;
+                if (tier == "III") n = 4;
+                let fee = i + n;
+                return fee;
+            }
         },
         getThreshold(tier) { // Calculates threshold bc making a seperate object for each rank is dumb
             let n = 0;

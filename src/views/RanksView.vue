@@ -19,7 +19,7 @@
                     <div class="divine-banners">
                         <div class="divine-banner-text-wrapper">
                             <div class="divine-name">Divine</div>
-                            <div class="divine-fee">Fee: 20</div>
+                            <div class="divine-fee">Fee: 26</div>
                             <div class="divine-threshold">TOP 50 PLAYERS</div>
                         </div>
                     </div>
@@ -31,9 +31,9 @@
                     <div class="info-banner-text-wrapper">
                         <div class="info-title">INFO</div>
                         <div class="info-banner-text">
-                            <div>1st: +12 | 2nd: +8 | 3rd: +4</div>
-                            <div>Team Kills: +4</div>
-                            <div>Each ranked game costs an RP fee depending on rank</div>
+                            <div>1st: +30 | Team Kills: +5 |</div>
+                            <div></div>
+                            <div>Solo: 50% fee | Duo: 75% fee | Trio: 100% fee</div>
                         </div>
                     </div>
                 </div>
