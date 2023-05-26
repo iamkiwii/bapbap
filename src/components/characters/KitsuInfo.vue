@@ -139,21 +139,21 @@ const abilities = reactive({
     },
     special: {
         name: 'Mooncall',
-        damage: 999,
+        damage: 60,
         scaling: '',
         cooldown: '7s',
         info: 'Rain down arrows in an area. Apply slow on hit.'
     },
     movement: {
         name: 'Foxtrot',
-        damage: 999,
-        scaling: '',
+        damage: 80,
+        scaling: '(x4)',
         cooldown: '14s',
         info: 'Shoot the ground to jump away. Apply knockup on hit.'
     },
     ultimate: {
         name: 'Shooting Stars',
-        damage: 999,
+        damage: 350,
         scaling: '',
         cooldown: '25s',
         info: 'Shoot a piercing arrow through obstacles and enemies. Apply root on hit.'
