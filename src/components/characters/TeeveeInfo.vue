@@ -148,14 +148,14 @@ const abilities = reactive({
         name: 'Ctrl+C & Ctrl+V',
         damage: "N/A",
         scaling: '',
-        cooldown: '12.5s',
+        cooldown: '11.5s',
         info: 'Teleport to a location and create a clone at your original position. Recast to swap positions with your clone.'
     },
     ultimate: {
         name: 'memcpy',
         damage: "N/A",
         scaling: '',
-        cooldown: '12.5s',
+        cooldown: '11.5s',
         info: 'Create a clone at a location. Recast to swap positions with your clone.'
     }
 })
