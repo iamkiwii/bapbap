@@ -131,7 +131,7 @@ const abilities = reactive({
     basic: {
         name: 'Fire Slash',
         damage: 100,
-        scaling: '(135)',
+        scaling: '(140)',
         info: 'Slash for a 3-hit combo.'
     },
     special: {
@@ -143,7 +143,7 @@ const abilities = reactive({
     },
     movement: {
         name: 'Fiery Dash',
-        damage: 80,
+        damage: 90,
         scaling: '',
         cooldown: '6s',
         info: 'Dash forward, setting your katana on fire. Recast upon hitting an enemy up to 3 times.'
