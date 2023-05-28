@@ -1,69 +1,77 @@
 <template>
-    <div class="item-selector-wrapper">
-        <div class="button-wrapper" v-for="ActiveItemObject in UserData.ActiveItems" :key="ActiveItemObject">
-            <ItemSelector :item="ActiveItemObject" @click="toggleActiveItem(ActiveItemObject)" :key="updateKey" />
-        </div>
-    </div>
-
-    <div class="item-display-wrapper">
-        <div class="item-display" v-for="item in GameData.itemlist" :key="item">
-            <ItemDisplay :item="item" :key="updateKey" />
+    <div id="items-wrapper">
+        <div id="item-display-wrapper">
+            <div id="normal-items-wrapper">
+                <div id="normal-items-display" v-show="normalItems">
+                    <NormalItems class="NormalItems" />
+                </div>
+            </div>
+            <div id="buttons-wrapper" @click="toggleSlider()">
+                <div id="normal-button">
+                    <div id="normal-btn-txt" class="btn-hover material-symbols-outlined">keyboard_double_arrow_up</div>
+                </div>
+                <div id="special-button">
+                    <div id="special-btn-txt" class="btn-hover">SPECIAL ITEMS</div>
+                </div>
+            </div>
+            <div id="special-items-wrapper">
+                <div id="special-items-display" v-show="specialItems">
+                    <SpecialItems class="SpecialItems" />
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import ItemSelector from '@/components/items/ItemSelector.vue';
-import ItemDisplay from '@/components/items/ItemDisplay.vue';
-import GameData from '@/assets/GameData.js'
-import UserData from '@/assets/UserData.js';
-import { ItemObject } from '@/assets/GameData.js';
-import { ActiveItemObject } from '@/assets/UserData.js';
-
+import NormalItems from '@/components/items/NormalItems.vue';
+import SpecialItems from '@/components/items/SpecialItems.vue';
 
 </script>
 
 <script>
 export default {
+    methods: {
+        toggleSlider(a) {
+            let normalItemsWrapper = document.getElementById('normal-items-wrapper');
+            let specialItemsWrapper = document.getElementById('special-items-wrapper');
+            let normalButtonText = document.getElementById('normal-btn-txt');
+            let specialButtonText = document.getElementById('special-btn-txt');
+
+            if (normalItemsWrapper.style.width == '100%') {
+                normalItemsWrapper.style.width = '0%';
+                specialItemsWrapper.style.width = '100%';
+                specialButtonText.innerHTML = 'keyboard_double_arrow_up'
+                normalButtonText.innerHTML = 'NORMAL ITEMS'
+                normalButtonText.classList.remove('material-symbols-outlined');
+                specialButtonText.classList.add('material-symbols-outlined');
+                this.normalItems = false;
+                this.specialItems = true;
+            } else {
+                specialItemsWrapper.style.width = '0%';
+                normalItemsWrapper.style.width = '100%';
+                if (a != "a") {
+                    normalButtonText.classList.add('material-symbols-outlined');
+                    specialButtonText.classList.remove('material-symbols-outlined');
+                    normalButtonText.innerHTML = 'keyboard_double_arrow_up'
+                    specialButtonText.innerHTML = 'SPECIAL ITEMS'
+                    this.specialItems = false;
+                    this.normalItems = true;
+                }
+            }
+        }
+    },
+    mounted() {
+        this.toggleSlider("a");
+    },
     data() {
         return {
-            GameData: GameData,
-            item: ItemObject,
-            ActiveItemObject: ActiveItemObject,
-            updateKey: 0
-        }
-    },
-    components: {
-        ItemDisplay
-    },
-    methods: {
-        // Toggles active item in UserData.ActiveItems then forces a re-render of the ItemSelector component
-        toggleActiveItem(item) {
-            toggleActive(item);
-            this.forceRender();
-        },
-        // Forces a re-render of the ItemSelector component
-        forceRender() {
-            this.updateKey++;
+            normalItems: true,
+            specialItems: false
         }
     }
-
 }
 
-function toggleActive(a) {
-    UserData.currentActive = a.name
-    if (a.isActive == true) {
-        return;
-    }
-    for (let i = 0; i < UserData.ActiveItems.length; i++) {
-        if (UserData.ActiveItems[i] == a) {
-            UserData.ActiveItems[i].isActive = true;
-        } else {
-            UserData.ActiveItems[i].isActive = false;
-        }
-    }
-    a.isActive = true;
-}
 
 
 
@@ -71,35 +79,133 @@ function toggleActive(a) {
 
 
 <style lang="scss" scoped>
-.item-display {
-    width: 20%;
+.NormalItems {
+    width: 100%;
+    height: 100%;
 }
 
-.item-type-banner {
-    width: 20%;
+
+#items-wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-top: 8vh;
+
+    #item-display-wrapper {
+        display: flex;
+        width: 100%;
+        background-color: #091335;
+        height: 700px;
+        transform: skew(-5deg);
+        box-shadow: 8px 8px 0px rgba($color: #fed606, $alpha: 1), 12px 12px 20px rgba($color: #000000, $alpha: 0.3);
+
+        #normal-items-wrapper {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: 0.3s ease-in-out;
+
+            #normal-items-display {
+                width: 100%;
+                height: 100%;
+                transition-delay: 0.3s ease-in-out;
+            }
+        }
+
+        #buttons-wrapper {
+            display: flex;
+            width: 10%;
+
+            #normal-button {
+                width: 50%;
+                height: 100%;
+                transition: 0.3s ease-in-out;
+            }
+
+            #special-button {
+                border-left: 5px solid white;
+                width: 50%;
+                height: 100%;
+                transition: 0.3s ease-in-out;
+            }
+
+            .btn-hover {
+                transition: 0.2s ease-in-out;
+            }
+        }
+
+        #special-items-wrapper {
+            width: 0%;
+            height: 100%;
+            display: flex;
+            transition: 0.3s ease-in-out;
+
+            #special-items-display {
+                width: 100%;
+                height: 100%;
+                transition: 0.3s ease-in-out;
+                transition-delay: 0.3s;
+            }
+
+        }
+    }
+}
+
+
+#special-btn-txt {
+    position: relative;
+    bottom: 0;
+    top: 50%;
+    right: 220%;
+    transform: rotate(90deg);
+    transform-origin: 0, 0;
+    width: 350px;
+    color: white;
+    font-size: 35px;
     text-align: center;
 }
 
-.item-types-wrapper {
-    display: flex;
-    flex-direction: row;
+#normal-btn-txt {
+    position: relative;
+    bottom: 0;
+    top: 50%;
+    right: 220%;
+    transform: rotate(-90deg);
+    transform-origin: 0, 0;
+    width: 350px;
+    color: white;
+    font-size: 35px;
+    text-align: center;
 }
 
-.item-display-wrapper {
-    margin-top: 3%;
-    display: flex;
-    flex-direction: row;
-    transition: all 0.5s ease;
-}
+#buttons-wrapper:hover {
 
+    #normal-button {
+        color: #fed606;
+        transition: 0.2s ease-in-out;
 
-.item-selector-wrapper {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: fit-content;
-    height: fit-content;
-    transform: skew(-5deg);
+        #normal-btn-txt {
+            font-size: 36.75px;
+        }
+
+        .material-symbols-outlined {
+            color: #fed606;
+            right: 250%;
+            transform: rotate(-90deg) scale(1.5) !important;
+        }
+    }
+
+    #special-button {
+
+        #special-btn-txt {
+            font-size: 36.75px;
+        }
+
+        .material-symbols-outlined {
+            color: #fed606;
+            right: 190%;
+            transform: rotate(90deg) scale(1.5) !important;
+        }
+    }
 }
 </style>
