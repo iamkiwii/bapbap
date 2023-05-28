@@ -23,8 +23,8 @@ export default {
 <style lang="scss" scoped>
 .material-symbols-rounded {
     font-size: inherit;
-    color: #6121aa;
     text-decoration: underline;
+    color: #6121aa;
     text-shadow: 2px 2px 0px rgba($color: #3c1569, $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3);
 }
 
