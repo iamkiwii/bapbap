@@ -333,7 +333,6 @@ const items = {
                 text-align: center;
             }
 
-
             .title-wrapper {
                 display: flex;
                 top: 0;
@@ -371,14 +370,12 @@ const items = {
                     margin-left: auto;
                     text-align: center;
                     margin-top: 10%;
-                    width: 55%;
+                    width: 65%;
                     background-color: #092238;
                 }
-
             }
         }
     }
-
 }
 
 .white {
