@@ -100,7 +100,7 @@
                     <div class="items">
                         <DMGLogo />
                         <CDRLogo />
-                        <CDRLogo />
+                        <ASLogo />
                     </div>
                 </div>
             </div>

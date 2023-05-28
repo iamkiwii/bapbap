@@ -9,7 +9,7 @@
                 </div>
                 <div class="nickname">{{ champ.nickname }}</div>
             </div>
-            <div class="image-wrapper">
+            <div class="image-wrapper" id="fuck-you2">
                 <img :src="Champ" class="image" draggable="false" />
             </div>
         </div>
@@ -38,7 +38,7 @@
                     </div>
                     <div class="text-wrapper">
                         <div class="ability-name-wrapper">
-                            <div class="ability-name">{{ abilities.special.name }}</div>
+                            <div class="ability-name" id="fuck-you">{{ abilities.special.name }}</div>
                             <div class="ability-damage">
                                 <AbilityDMGLogo /> {{ abilities.special.damage }} <div class="scaling">
                                     {{ abilities.special.scaling }}</div>
@@ -179,7 +179,7 @@ export default {
 
 #fuck-you2 {
 
-    width: 130%;
+    width: 85%;
 
 }
 </style>
