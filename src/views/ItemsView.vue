@@ -2,8 +2,8 @@
     <div id="items-wrapper">
         <div id="item-display-wrapper">
             <div id="normal-items-wrapper">
-                <div id="normal-items-display" v-show="normalItems">
-                    <NormalItems class="NormalItems" />
+                <div id="normal-items-display">
+                    <NormalItems id="NormalItems" v-show="normalItems" />
                 </div>
             </div>
             <div id="buttons-wrapper" @click="toggleSlider()">
@@ -16,7 +16,7 @@
             </div>
             <div id="special-items-wrapper">
                 <div id="special-items-display" v-show="specialItems">
-                    <SpecialItems class="SpecialItems" />
+                    <SpecialItems id="SpecialItems" />
                 </div>
             </div>
         </div>
@@ -33,6 +33,7 @@ import SpecialItems from '@/components/items/SpecialItems.vue';
 export default {
     methods: {
         toggleSlider(a) {
+            let NormalItemsComp = document.getElementById('NormalItems');
             let normalItemsWrapper = document.getElementById('normal-items-wrapper');
             let specialItemsWrapper = document.getElementById('special-items-wrapper');
             let normalButtonText = document.getElementById('normal-btn-txt');
@@ -45,19 +46,28 @@ export default {
                 normalButtonText.innerHTML = 'NORMAL ITEMS'
                 normalButtonText.classList.remove('material-symbols-outlined');
                 specialButtonText.classList.add('material-symbols-outlined');
-                this.normalItems = false;
+                NormalItemsComp.style.opacity = '0%';
+                NormalItemsComp.style.transitionDelay = '0s';
                 this.specialItems = true;
+                setTimeout(() => {
+                    this.normalItems = false;
+                }, 140)
             } else {
-                specialItemsWrapper.style.width = '0%';
-                normalItemsWrapper.style.width = '100%';
-                if (a != "a") {
-                    normalButtonText.classList.add('material-symbols-outlined');
-                    specialButtonText.classList.remove('material-symbols-outlined');
-                    normalButtonText.innerHTML = 'keyboard_double_arrow_up'
-                    specialButtonText.innerHTML = 'SPECIAL ITEMS'
-                    this.specialItems = false;
-                    this.normalItems = true;
-                }
+                this.normalItems = true;
+                setTimeout(() => {
+                    specialItemsWrapper.style.width = '0%';
+                    normalItemsWrapper.style.width = '100%';
+                    if (a != "a") {
+                        normalButtonText.classList.add('material-symbols-outlined');
+                        specialButtonText.classList.remove('material-symbols-outlined');
+                        normalButtonText.innerHTML = 'keyboard_double_arrow_up'
+                        specialButtonText.innerHTML = 'SPECIAL ITEMS'
+                        NormalItemsComp.style.transitionDelay = '0.2s';
+                        NormalItemsComp.style.opacity = '100%';
+                        this.specialItems = false;
+                        console.log('aaaaa')
+                    }
+                }, 1)
             }
         }
     },
@@ -79,9 +89,12 @@ export default {
 
 
 <style lang="scss" scoped>
-.NormalItems {
+#NormalItems {
     width: 100%;
     height: 100%;
+    opacity: 100%;
+    transition: all .3s ease-in-out;
+    transition-delay: 0s;
 }
 
 
@@ -108,7 +121,7 @@ export default {
             #normal-items-display {
                 width: 100%;
                 height: 100%;
-                transition-delay: 0.3s ease-in-out;
+                transition: 0.3s ease-in-out;
             }
         }
 
@@ -144,7 +157,6 @@ export default {
                 width: 100%;
                 height: 100%;
                 transition: 0.3s ease-in-out;
-                transition-delay: 0.3s;
             }
 
         }
@@ -178,7 +190,13 @@ export default {
     text-align: center;
 }
 
+#buttons-wrapper {
+    cursor: pointer;
+}
+
 #buttons-wrapper:hover {
+
+    cursor: pointer;
 
     #normal-button {
         color: #fed606;

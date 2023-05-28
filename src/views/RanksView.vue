@@ -31,9 +31,9 @@
                     <div class="info-banner-text-wrapper">
                         <div class="info-title">INFO</div>
                         <div class="info-banner-text">
-                            <div>1st: +30 | Team Kills: +5 |</div>
-                            <div></div>
-                            <div>Solo: 50% fee | Duo: 75% fee | Trio: 100% fee</div>
+                            <div>1st: +30 | Team Kills: +5</div>
+                            <div> Solo: 50% fee | Duo: 75% fee</div>
+                            <div>Each game costs an RP fee depending on rank.</div>
                         </div>
                     </div>
                 </div>
