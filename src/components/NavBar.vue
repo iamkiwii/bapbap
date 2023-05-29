@@ -4,7 +4,7 @@
         <RouterLink to="/characters" class="link">CHARACTERS</RouterLink>
         <RouterLink to="/items" class="link">ITEMS</RouterLink>
         <RouterLink to="/ranks" class="link">RANKS</RouterLink>
-        <RouterLink to="/stats" class="link">LEADERBOARDS</RouterLink>
+        <!-- <RouterLink to="/stats" class="link">LEADERBOARDS</RouterLink> -->
         <div class="profile-area">
             <ProfileArea />
         </div>

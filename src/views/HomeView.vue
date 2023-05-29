@@ -1,10 +1,10 @@
 <template>
   <div class="home-wrapper">
     <div class="buttons-wrapper">
-      <RouterLink to="/patchnotes" class="patchnotes button">
+      <RouterLink to="/items" class="items button">
         <div class="left-side">
-          <div class="btn-text">Patchnotes</div>
-          <div class="material-symbols-rounded">description</div>
+          <div class="btn-text">ITEMS</div>
+          <div class="material-symbols-rounded">swords</div>
         </div>
         <div class="right-side">
           <div class="material-symbols-rounded">
@@ -38,6 +38,24 @@
     <div class="divider"></div>
     <div class="recent-patch">
       <div class="title">RECENT PATCH</div>
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO BUFF FROGGY NERF KIDDO
+      BUFF FROGGY NERF KIDDO
     </div>
   </div>
 </template>
