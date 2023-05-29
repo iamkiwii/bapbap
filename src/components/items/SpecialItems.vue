@@ -54,8 +54,7 @@ const items = {
         name: "SPIKY BAG",
         passive: "Reflect 20% of the damage to the attacker.",
         stats: {
-            health: ["+900", "hp"],
-            basehp: ["+50%", "hp"]
+            health: ["+900", "hp"]
         },
         cost: 499
     },
@@ -81,7 +80,7 @@ const items = {
     },
     metalboots: {
         name: "METAL BOOTS",
-        passive: "Immune to CC smth smth idk",
+        passive: "Immune to crowd control, take 25% less damage but you move slower.",
         stats: {
             health: ["+500", "hp"],
             movespeed: ["-25", "ms"]
@@ -90,7 +89,7 @@ const items = {
     },
     sprintboots: {
         name: "SPRINT BOOTS",
-        passive: "You gain sprint on ulimate smth smth",
+        passive: "Using your ultimate grants sprint for 1.5s.",
         stats: {
             ms: ["+150", "ms"]
         },

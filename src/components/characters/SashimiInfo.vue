@@ -99,7 +99,7 @@
                     </div>
                     <div class="items">
                         <ASLogo />
-                        <ASLogo />
+                        <VampLogo />
                         <HealthLogo />
                     </div>
                 </div>
