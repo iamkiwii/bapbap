@@ -15,8 +15,8 @@
                 </div>
             </div>
             <div id="special-items-wrapper">
-                <div id="special-items-display" v-show="specialItems">
-                    <SpecialItems id="SpecialItems" />
+                <div id="special-items-display">
+                    <SpecialItems id="SpecialItems" v-show="specialItems" />
                 </div>
             </div>
         </div>
@@ -34,21 +34,26 @@ export default {
     methods: {
         toggleSlider(a) {
             let NormalItemsComp = document.getElementById('NormalItems');
+            let SpecialItemsComp = document.getElementById('SpecialItems');
             let normalItemsWrapper = document.getElementById('normal-items-wrapper');
             let specialItemsWrapper = document.getElementById('special-items-wrapper');
             let normalButtonText = document.getElementById('normal-btn-txt');
             let specialButtonText = document.getElementById('special-btn-txt');
 
             if (normalItemsWrapper.style.width == '100%') {
-                normalItemsWrapper.style.width = '0%';
-                specialItemsWrapper.style.width = '100%';
-                specialButtonText.innerHTML = 'keyboard_double_arrow_up'
-                normalButtonText.innerHTML = 'NORMAL ITEMS'
-                normalButtonText.classList.remove('material-symbols-outlined');
-                specialButtonText.classList.add('material-symbols-outlined');
-                NormalItemsComp.style.opacity = '0%';
-                NormalItemsComp.style.transitionDelay = '0s';
                 this.specialItems = true;
+                setTimeout(() => {
+                    normalItemsWrapper.style.width = '0%';
+                    specialItemsWrapper.style.width = '100%';
+                    specialButtonText.innerHTML = 'keyboard_double_arrow_up'
+                    normalButtonText.innerHTML = 'NORMAL ITEMS'
+                    normalButtonText.classList.remove('material-symbols-outlined');
+                    specialButtonText.classList.add('material-symbols-outlined');
+                    NormalItemsComp.style.opacity = '0%';
+                    NormalItemsComp.style.transitionDelay = '0s';
+                    SpecialItemsComp.style.opacity = '100%';
+                    SpecialItemsComp.style.transitionDelay = '0.2s';
+                }, 1)
                 setTimeout(() => {
                     this.normalItems = false;
                 }, 140)
@@ -63,11 +68,14 @@ export default {
                         normalButtonText.innerHTML = 'keyboard_double_arrow_up'
                         specialButtonText.innerHTML = 'SPECIAL ITEMS'
                         NormalItemsComp.style.transitionDelay = '0.2s';
-                        NormalItemsComp.style.opacity = '100%';
-                        this.specialItems = false;
-                        console.log('aaaaa')
+                        NormalItemsComp.style.opacity = '100'
+                        SpecialItemsComp.style.opacity = '0%';
+                        SpecialItemsComp.style.transitionDelay = '0s';
                     }
                 }, 1)
+                setTimeout(() => {
+                    this.specialItems = false;
+                }, 140)
             }
         }
     },
@@ -97,6 +105,13 @@ export default {
     transition-delay: 0s;
 }
 
+#SpecialItems {
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    transition: all .3s ease-in-out;
+    transition-delay: 0.2s;
+}
 
 #items-wrapper {
     display: flex;
