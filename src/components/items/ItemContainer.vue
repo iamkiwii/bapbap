@@ -1,6 +1,7 @@
 <template>
     <div id="wrapper">
-        <div id="title">{{ name }} {{ cost }}</div>
+        <div id="title">{{ name }} <div id="cost">{{ cost }}</div>
+        </div>
         <div id="description">{{ passive }}</div>
         <div id="stats-wrapper">
             <div id="stat-wrapper" v-for="stat in stats" :key="stat">
@@ -57,15 +58,34 @@ export default {
 
 <style lang="scss" scoped>
 #wrapper {
+    background-color: #092238;
+    color: #ffe24c;
+    box-shadow: 3px 3px 0px rgba($color: #bba432, $alpha: 1), 5px 5px 8px rgba($color: #000000, $alpha: 0.3);
+    width: 105%;
+    height: 90%;
+    padding: 5%;
 
     #title {
+        display: flex;
         color: white;
         font-size: 1.5em;
+
+        #cost {
+            text-align: right;
+            font-size: .7em;
+            color: #ffe24c;
+            height: fit-content;
+            margin-left: auto;
+            margin-top: auto;
+            margin-bottom: 1%;
+        }
+
     }
 
     #description {
+        height: 23%;
         color: white;
-        font-size: 1em;
+        font-size: .9em;
         margin-bottom: 5%;
     }
 
@@ -75,7 +95,7 @@ export default {
 
         #stat-wrapper {
             margin-top: 1%;
-            width: 50%;
+            width: 40%;
             display: flex;
 
             .stat-logo {

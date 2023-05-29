@@ -1,8 +1,9 @@
 <template>
     <div class="special-wrapper">
-        <div class="wip">THIS PAGE IS WIP</div>
         <div class="item-container" v-for="item in items" :key="item">
-            <ItemContainer :item="item" />
+            <div class="test">
+                <ItemContainer :item="item" />
+            </div>
         </div>
     </div>
 </template>
@@ -45,7 +46,7 @@ const items = {
         stats: {
             damage: ["+60", "dmg"],
             health: ["+250", "hp"],
-            basehp: ["+50% (base)", "hp"]
+            basehp: ["+50%", "hp"]
         },
         cost: 499
     },
@@ -54,7 +55,7 @@ const items = {
         passive: "Reflect 20% of the damage to the attacker.",
         stats: {
             health: ["+900", "hp"],
-            basehp: ["+50% (base)", "hp"]
+            basehp: ["+50%", "hp"]
         },
         cost: 499
     },
@@ -72,7 +73,7 @@ const items = {
         name: "RESET BOOTS",
         passive: "Rest all cooldowns on kill.",
         stats: {
-            damage: [40, "dmg"],
+            damage: ["+40", "dmg"],
             as: ["+15%", "as"],
             ms: ["+75", "ms"]
         },
@@ -101,13 +102,18 @@ const items = {
 </script>
 
 <style lang="scss" scoped>
+.test {
+    width: 100%;
+    height: 100%;
+}
+
 .special-wrapper {
-    margin-top: 3%;
+    margin-top: 2%;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 100%;
     margin-left: 5%;
+
 
     .item-container {
         margin-right: 5%;

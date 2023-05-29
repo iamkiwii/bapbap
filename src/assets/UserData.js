@@ -1,3 +1,5 @@
+import { reactive } from 'vue'
+
 export class ActiveItemObject {
     constructor(props) {
         this.name = props.name;
@@ -29,12 +31,12 @@ var Boots = {
 
 
 
-var UserData = {
+var UserData = reactive({
     ActiveItems: [],
     ActiveChamps: [],
     CurrentActive: "Hat",
     CurrentActiveChamp: "Chuck"
-}
+})
 
 
 UserData.ActiveItems.push(new ActiveItemObject(Hat));

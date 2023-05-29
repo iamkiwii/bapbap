@@ -8,7 +8,6 @@
 </template>
 
 <script setup>
-import { ActiveChampObject } from '@/assets/UserData'
 import Kitsu from '@/assets/champs/Kitsu/Kitsu Icon.png'
 import Anna from '@/assets/champs/Anna/Anna Icon.png'
 import Chuck from '@/assets/champs/Chuck/Chuck Icon.png'
@@ -25,7 +24,8 @@ import Kiddo from '@/assets/champs/Kiddo/Kiddo Icon.png'
 
 export default {
     props: {
-        champ: ActiveChampObject
+        champ: String,
+        active: String
     },
     data() {
         return {
@@ -34,7 +34,7 @@ export default {
     },
     methods: {
         getImage() {
-            switch (this.champ.name) {
+            switch (this.champ) {
                 case "Kitsu":
                     return Kitsu;
                 case "Anna":
@@ -60,7 +60,7 @@ export default {
             }
         },
         checkIfActive() {
-            if (this.champ.isActive == true) {
+            if (this.champ == this.active) {
                 return "active"
             }
             else {
