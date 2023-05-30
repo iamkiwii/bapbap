@@ -72,21 +72,21 @@ var Gold = {
 var Platinum = {
     rank: "Platinum",
     tiers: ["I", "II", "III"],
-    fee: 11,
+    fee: 12,
     threshold: 1000
 }
 
 var Diamond = {
     rank: "Diamond",
     tiers: ["I", "II", "III"],
-    fee: 14,
+    fee: 18,
     threshold: 1300
 }
 
 var Royal = {
     rank: "Royal",
     tiers: ["I", "II", "III"],
-    fee: 20,
+    fee: 25,
     threshold: 1600
 }
 

@@ -7,7 +7,7 @@
             <div class="rank-banners" v-for="tier in rank.tiers" :key="tier" :class="tier">
                 <div class="banner-text-wrapper">
                     <div class="rank-name">{{ getRankText(tier) }}</div>
-                    <div class="rank-fee">Fee: {{ getFee(tier) }}</div>
+                    <div class="rank-fee">Fee: -{{ getFee(tier) }}</div>
                     <div class="rank-threshold">Threshhold: {{ getThreshold(tier) }}</div>
                 </div>
             </div>
@@ -71,21 +71,33 @@ export default {
             return this.rank.rank + " " + tier
         },
         getFee(tier) { // Calculates fee bc making a seperate object for each rank is dumb
-            if (this.rank.rank != "Royal") {
-                let n = 0;
-                let i = this.rank.fee;
-                if (tier == "II") n = 1;
-                if (tier == "III") n = 2;
-                let fee = i + n;
-                return fee;
-            } else {
-                let n = 0;
-                let i = this.rank.fee;
-                if (tier == "II") n = 2;
-                if (tier == "III") n = 4;
-                let fee = i + n;
-                return fee;
+            let scale = 0
+            switch (this.rank.rank) {
+                case "Bronze":
+                    scale = 1;
+                    break;
+                case "Silver":
+                    scale = 1;
+                    break;
+                case "Gold":
+                    scale = 1;
+                    break;
+                case "Platinum":
+                    scale = 2;
+                    break;
+                case "Diamond":
+                    scale = 2;
+                    break;
+                case "Royal":
+                    scale = 3;
+                    break;
             }
+            let n = 0;
+            let i = this.rank.fee;
+            if (tier == "II") n = scale;
+            if (tier == "III") n = scale * 2;
+            let fee = i + n;
+            return fee;
         },
         getThreshold(tier) { // Calculates threshold bc making a seperate object for each rank is dumb
             let n = 0;
@@ -95,7 +107,7 @@ export default {
             let threshold = i + (n * 100);
             return threshold;
         }
-    }
+    },
 }
 
 </script>
