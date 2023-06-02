@@ -205,173 +205,188 @@ const items = {
 
 .normalitems-wrapper {
     display: flex;
-}
 
-.items-wrapper {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 100%;
-    margin-top: 1%;
-
-    .types-wrapper {
-        margin-top: 2%;
-        border-bottom: 4px solid white;
-        margin-left: 3.5%;
-        align-items: center;
-        width: 100%;
-        height: 17%;
+    .items-wrapper {
+        text-align: left;
         display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        margin-top: 1%;
 
-        .logos {
-            margin-bottom: 45%;
-            font-size: 80px;
+        .types-wrapper {
+            margin-top: 2%;
+            border-bottom: 4px solid white;
+            margin-left: 3.5%;
+            align-items: center;
+            width: 100%;
+            height: 17%;
+            display: flex;
+
+            .logos {
+                margin-bottom: 45%;
+                font-size: 80px;
+                width: fit-content;
+                height: fit-content;
+                justify-self: center;
+            }
+
+            .right-wrapper {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+
+                .title-wrapper {
+                    display: flex;
+                    top: 0;
+                    margin-bottom: auto;
+                    width: fit-content;
+                    margin-left: 3%;
+                    width: 100%;
+                    position: relative;
+
+                    .type-name {
+                        color: white;
+                        font-size: 30px;
+                    }
+
+                    .type-desc {
+                        color: white;
+                        margin-left: 2%;
+                        height: fit-content;
+                        font-size: 10px;
+                        margin-top: auto;
+                        margin-bottom: 3%;
+                    }
+                }
+
+                .info-wrapper {
+                    display: flex;
+                    margin-left: 1%;
+                    margin-top: 1.5%;
+                    margin-bottom: 40%;
+                    font-size: 30px;
+                    flex-direction: row;
+                    height: fit-content;
+                    width: 100%;
+
+                    .stats {
+                        margin-left: 2%;
+                        text-align: center;
+                        width: 30%;
+                        background-color: #092238;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .passives-wrapper {
+        margin-top: 8%;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .passive-title {
+            margin-left: 12.5%;
+            top: 0;
+            margin-bottom: auto;
+            font-size: 50px;
+            color: white;
             width: fit-content;
             height: fit-content;
-            justify-self: center;
+            align-self: center;
         }
 
-        .right-wrapper {
+        .passive-type-wrapper {
             display: flex;
-            flex-direction: column;
-            width: 100%;
             height: 100%;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-left: 10%;
 
-            .title-wrapper {
+            #right-sep {
+                border-right: 4px solid white;
+            }
+
+            #left-sep {
+                border-left: 4px solid white;
+            }
+
+            .seperator {
+                margin-top: 5%;
+                width: 5%;
+                height: 52%;
+            }
+
+
+            .type-wrapper {
+                margin-top: 5%;
+                width: 30%;
+                height: 100%;
                 display: flex;
-                top: 0;
-                margin-bottom: auto;
-                width: fit-content;
-                margin-left: 3%;
-                width: 100%;
-                position: relative;
-
-                .type-name {
-                    color: white;
-                    font-size: 30px;
-                }
-
-                .type-desc {
-                    color: white;
-                    margin-left: 2%;
-                    height: fit-content;
-                    font-size: 10px;
-                    margin-top: auto;
-                    margin-bottom: 3%;
-                }
-            }
-
-            .info-wrapper {
-                display: flex;
-                margin-left: 1%;
-                margin-top: 1.5%;
-                margin-bottom: 40%;
-                font-size: 30px;
-                flex-direction: row;
-                height: fit-content;
-                width: 100%;
-
-                .stats {
-                    margin-left: 2%;
-                    text-align: center;
-                    width: 30%;
-                    background-color: #092238;
-                }
-
-            }
-        }
-    }
-}
-
-.passives-wrapper {
-    margin-top: 8%;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    .passive-title {
-        margin-left: 12.5%;
-        top: 0;
-        margin-bottom: auto;
-        font-size: 50px;
-        color: white;
-        width: fit-content;
-        height: fit-content;
-        align-self: center;
-    }
-
-    .passive-type-wrapper {
-        display: flex;
-        height: 100%;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin-left: 10%;
-
-        .type-wrapper {
-            margin-top: 5%;
-            width: 30%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-
-            .type-title {
-                align-self: center;
-                color: white;
-                font-size: 25px;
-                width: fit-content;
-                height: fit-content;
-            }
-
-            .type-desc {
-                color: white;
-                font-size: 12px;
-                width: 100%;
-                height: fit-content;
-                text-align: center;
-            }
-
-            .title-wrapper {
-                display: flex;
-                top: 0;
-                margin-bottom: auto;
-                width: fit-content;
-                margin-left: 3%;
-                width: 100%;
-                position: relative;
-
-                .type-name {
-                    color: white;
-                    font-size: 30px;
-                }
-
-                .type-desc {
-                    color: white;
-                    margin-left: 2%;
-                    height: fit-content;
-                    font-size: 10px;
-                    margin-top: auto;
-                    margin-bottom: 3%;
-                }
-            }
-
-            .info-wrapper {
-                margin-top: 1%;
-                display: flex;
-                font-size: 30px;
                 flex-direction: column;
-                height: 50%;
-                width: 100%;
 
-                .stats {
-                    margin-right: auto;
-                    margin-left: auto;
+                .type-title {
+                    align-self: center;
+                    color: white;
+                    font-size: 25px;
+                    width: fit-content;
+                    height: fit-content;
+                }
+
+                .type-desc {
+                    color: white;
+                    font-size: 12px;
+                    width: 100%;
+                    height: fit-content;
                     text-align: center;
-                    margin-top: 10%;
-                    width: 65%;
-                    background-color: #092238;
+                }
+
+                .title-wrapper {
+                    display: flex;
+                    top: 0;
+                    margin-bottom: auto;
+                    width: fit-content;
+                    margin-left: 3%;
+                    width: 100%;
+                    position: relative;
+
+                    .type-name {
+                        color: white;
+                        font-size: 30px;
+                    }
+
+                    .type-desc {
+                        color: white;
+                        margin-left: 2%;
+                        height: fit-content;
+                        font-size: 10px;
+                        margin-top: auto;
+                        margin-bottom: 3%;
+                    }
+                }
+
+                .info-wrapper {
+                    margin-top: 1%;
+                    display: flex;
+                    font-size: 30px;
+                    flex-direction: column;
+                    height: 50%;
+                    width: 100%;
+
+                    .stats {
+                        margin-right: auto;
+                        margin-left: auto;
+                        text-align: center;
+                        margin-top: 10%;
+                        width: 65%;
+                        background-color: #092238;
+                    }
                 }
             }
         }

@@ -38,7 +38,7 @@ const items = {
             damage: ["+80", "dmg"],
             cdr: ["+75", "cdr"]
         },
-        cost: 399
+        cost: 199
     },
     shieldbag: {
         name: "SHIELD BAG",
@@ -83,7 +83,7 @@ const items = {
         passive: "Immune to crowd control, take 25% less damage but you move slower.",
         stats: {
             health: ["+500", "hp"],
-            movespeed: ["-25", "ms"]
+            movespeed: ["-10", "ms"]
         },
         cost: 499
     },
